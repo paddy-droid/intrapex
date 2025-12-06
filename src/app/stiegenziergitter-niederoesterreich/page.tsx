@@ -4,8 +4,8 @@ import { ArrowRight, Factory, MapPin, CheckCircle, Phone, FileText, LayoutGrid, 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Stiegenziergitter Niederösterreich - Guss nach Maß | Intrapex",
-    description: "Ihr Partner für Stiegenziergitter in Niederösterreich. Individuelle Gusslösungen aus Tulln für Sanierung und Neubau.",
+    title: "Stiegenziergitter Niederösterreich: Guss aus Tulln",
+    description: "Perfekte Gusslösungen für Niederösterreich. Ziergitter & Geländer für Sanierung & Neubau. Ihr Gießerei-Partner vor Ort.",
 };
 
 export default function StiegenziergitterNOE() {

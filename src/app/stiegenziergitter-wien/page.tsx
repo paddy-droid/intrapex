@@ -4,8 +4,8 @@ import { ArrowRight, MapPin, Star, Phone, CheckCircle, Package, Clock, Fence } f
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Stiegenziergitter Wien | Lagernde Modelle & Nachguss | Intrapex",
-    description: "Ihre Experten für Stiegenziergitter in Treppenhäusern & Gartenzäunen. Viele historische Wiener Modelle lagernd & sofort gießbar. Top-Qualität in Grauguss.",
+    title: "Stiegenziergitter Wien: Historische Guss-Nachbildungen",
+    description: "Gusseiserne Ziergitter für Wiener Zinshäuser & Zäune. Viele Modelle lagernd für schnelle Sanierung. Originalgetreuer Nachguss.",
     keywords: ["Stiegenziergitter Wien", "Stiegenhausgitter Zinshaus", "Gartenzäune Gusseisen", "Geländerstäbe Grauguss", "Historische Zäune Wien", "Stiegenziergitter lagernd", "Intrapex"],
 };
 

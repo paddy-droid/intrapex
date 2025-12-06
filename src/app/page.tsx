@@ -5,6 +5,13 @@ import { ArrowRight, Settings, Globe, ShieldCheck, Star, Phone, Send, Users, Tru
 import VideoTeaser from "@/components/ui/VideoTeaser";
 import ExplainerVideo from "@/components/ui/ExplainerVideo";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Intrapex: Gießerei-Netzwerk für Wien & Niederösterreich",
+  description: "Ihre Gießerei für Wien & NÖ. Hochwertiger Industrie- & Kunstguss, Stiegenziergitter und Sonderanfertigungen direkt aus Tulln.",
+};
+
 export default function Home() {
   return (
     <div className="flex flex-col w-full">
@@ -202,48 +209,83 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3-Step Process - Refined */}
-      <section className="py-24 bg-slate-50">
+      {/* 3-Step Process - Premium Redesign */}
+      <section className="py-24 bg-slate-50 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-sm font-bold text-orange-600 uppercase tracking-widest mb-3">Ablauf</h2>
-            <h3 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">In 3 Schritten zum Ziel.</h3>
+            <h2 className="text-sm font-bold text-orange-600 uppercase tracking-widest mb-3">Der Ablauf</h2>
+            <h3 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">In 3 Schritten zum fertigen Gussteil.</h3>
+            <p className="text-slate-600 text-lg">
+              Wir machen es Ihnen einfach. Von der ersten unverbindlichen Anfrage bis zur pünktlichen Lieferung – ein transparenter Prozess für Ihren Erfolg.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-12 relative max-w-6xl mx-auto">
-            {/* Step 1 */}
-            <div className="flex flex-col items-center text-center group">
-              <div className="w-16 h-16 rounded-full bg-slate-900 text-white flex items-center justify-center text-2xl font-serif font-bold shadow-xl mb-6 relative z-10 group-hover:scale-110 transition-transform duration-300">
-                1
-              </div>
-              <h4 className="text-xl font-bold text-slate-900 mb-3">Anfrage & Erstgespräch</h4>
-              <p className="text-slate-600 leading-relaxed text-sm px-4">
-                Skizze, Foto oder Plan. Wir klären die Machbarkeit sofort.
-              </p>
-            </div>
+          <div className="relative max-w-6xl mx-auto">
+            {/* Connecting Line (Desktop) - Animated Look */}
+            <div className="hidden md:block absolute top-[60px] left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-slate-200 via-orange-200 to-slate-200 z-0"></div>
 
-            {/* Step 2 */}
-            <div className="flex flex-col items-center text-center group">
-              <div className="w-16 h-16 rounded-full bg-orange-600 text-white flex items-center justify-center text-2xl font-serif font-bold shadow-xl mb-6 relative z-10 group-hover:scale-110 transition-transform duration-300">
-                2
-              </div>
-              <h4 className="text-xl font-bold text-slate-900 mb-3">Modellbau & Guss</h4>
-              <p className="text-slate-600 leading-relaxed text-sm px-4">
-                Fertigung in unserem europäischen Partner-Netzwerk.
-              </p>
-              {/* Connector Line (Desktop) */}
-              <div className="hidden md:block absolute top-8 left-[20%] right-[20%] h-0.5 bg-slate-200 -z-0"></div>
-            </div>
+            <div className="grid md:grid-cols-3 gap-12 relative z-10">
 
-            {/* Step 3 */}
-            <div className="flex flex-col items-center text-center group">
-              <div className="w-16 h-16 rounded-full bg-white border-2 border-slate-200 text-slate-900 flex items-center justify-center text-2xl font-serif font-bold shadow-xl mb-6 relative z-10 group-hover:scale-110 transition-transform duration-300 group-hover:border-orange-600 group-hover:text-orange-600">
-                3
+              {/* Step 1 */}
+              <div className="group relative bg-white p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full flex items-center justify-center border-2 border-slate-100 group-hover:border-orange-500 transition-colors shadow-sm">
+                  <span className="font-serif font-bold text-lg text-slate-400 group-hover:text-orange-600">01</span>
+                </div>
+                <div className="mt-6 text-center">
+                  <div className="w-16 h-16 mx-auto bg-slate-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-orange-50 transition-colors">
+                    <Send className="h-8 w-8 text-slate-700 group-hover:text-orange-600 transition-colors" />
+                  </div>
+                  <h4 className="text-xl font-bold text-slate-900 mb-3">Anfrage & Beratung</h4>
+                  <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                    Senden Sie uns Ihre Skizze, ein Foto oder CAD-Daten. Unsere Techniker prüfen machbare Legierungen (Grauguss, Stahl, etc.) und Optimierungspotentiale.
+                  </p>
+                  <ul className="text-xs text-slate-500 space-y-2 text-left bg-slate-50 p-4 rounded-xl">
+                    <li className="flex items-center gap-2"><CheckCircle2 className="h-3 w-3 text-orange-500" /> Kostenlose Machbarkeitsprüfung</li>
+                    <li className="flex items-center gap-2"><CheckCircle2 className="h-3 w-3 text-orange-500" /> Angebot innerhalb von 48h</li>
+                  </ul>
+                </div>
               </div>
-              <h4 className="text-xl font-bold text-slate-900 mb-3">Lieferung</h4>
-              <p className="text-slate-600 leading-relaxed text-sm px-4">
-                Pünktlich und sicher direkt zu Ihnen.
-              </p>
+
+              {/* Step 2 */}
+              <div className="group relative bg-white p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full flex items-center justify-center border-2 border-slate-100 group-hover:border-orange-500 transition-colors shadow-sm">
+                  <span className="font-serif font-bold text-lg text-slate-400 group-hover:text-orange-600">02</span>
+                </div>
+                <div className="mt-6 text-center">
+                  <div className="w-16 h-16 mx-auto bg-slate-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-orange-50 transition-colors">
+                    <Settings className="h-8 w-8 text-slate-700 group-hover:text-orange-600 transition-colors" />
+                  </div>
+                  <h4 className="text-xl font-bold text-slate-900 mb-3">Produktion & Qualität</h4>
+                  <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                    Wir koordinieren den Modellbau und wählen die passende Gießerei aus unserem Netzwerk. Jeder Schritt wird überwacht.
+                  </p>
+                  <ul className="text-xs text-slate-500 space-y-2 text-left bg-slate-50 p-4 rounded-xl">
+                    <li className="flex items-center gap-2"><CheckCircle2 className="h-3 w-3 text-orange-500" /> Modellbau & Abformung</li>
+                    <li className="flex items-center gap-2"><CheckCircle2 className="h-3 w-3 text-orange-500" /> Laufende Qualitätskontrolle</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Step 3 */}
+              <div className="group relative bg-white p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full flex items-center justify-center border-2 border-slate-100 group-hover:border-orange-500 transition-colors shadow-sm">
+                  <span className="font-serif font-bold text-lg text-slate-400 group-hover:text-orange-600">03</span>
+                </div>
+                <div className="mt-6 text-center">
+                  <div className="w-16 h-16 mx-auto bg-slate-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-orange-50 transition-colors">
+                    <Truck className="h-8 w-8 text-slate-700 group-hover:text-orange-600 transition-colors" />
+                  </div>
+                  <h4 className="text-xl font-bold text-slate-900 mb-3">Lieferung</h4>
+                  <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                    Das fertige Bauteil kommt sicher verpackt zu Ihnen. Auf Wunsch inkl. mechanischer Bearbeitung und Oberflächenschutz.
+                  </p>
+                  <ul className="text-xs text-slate-500 space-y-2 text-left bg-slate-50 p-4 rounded-xl">
+                    <li className="flex items-center gap-2"><CheckCircle2 className="h-3 w-3 text-orange-500" /> Termingerechte Logistik</li>
+                    <li className="flex items-center gap-2"><CheckCircle2 className="h-3 w-3 text-orange-500" /> Endabnahme & Protokoll</li>
+                  </ul>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>

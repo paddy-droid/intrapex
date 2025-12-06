@@ -3,8 +3,8 @@ import { ArrowRight, Box, Compass, Hammer, Layers, PenTool, Truck } from "lucide
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Leistungen - Fertigung, Modellbau & Full-Service | Intrapex",
-    description: "Unser Leistungsspektrum: Präzisionsguss, Modellbau nach Plan, Nachbearbeitung und Logistik. Alles aus einer Hand für Ihr Gussprojekt.",
+    title: "Gießerei-Leistungen: Modellbau & Serienguss in Wien/NÖ",
+    description: "Komplettservice von Modellbau bis Fertigteil. Grauguss, Sphäroguss und Stahlguss für Industrie & Architektur in höchster Qualität.",
 };
 
 export default function Leistungen() {

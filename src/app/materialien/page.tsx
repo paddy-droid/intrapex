@@ -3,8 +3,8 @@ import { ArrowRight, Zap, Scale, Shield, Database } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Materialkompetenz - Grauguss, Sphäro, Stahl, Alu | Intrapex",
-    description: "Detaillierte Übersicht unserer Gusswerkstoffe: EN-GJL (Grauguss), EN-GJS (Sphäroguss), Stahlguss und Nichteisen-Metalle.",
+    title: "Guss-Materialien: Grauguss, Stahl & Sonderlegierungen",
+    description: "Übersicht unserer Werkstoffe: EN-GJL, EN-GJS, Stahlguss & verschleißfeste Legierungen für jeden Einsatzzweck.",
 };
 
 export default function Materialien() {

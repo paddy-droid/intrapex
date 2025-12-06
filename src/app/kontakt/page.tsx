@@ -2,8 +2,8 @@ import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Kontakt - Gusslösungen anfragen | Intrapex",
-    description: "Kontaktieren Sie Intrapex in Tulln. Senden Sie uns Ihre Anfrage per E-Mail oder rufen Sie uns an. Wir beraten Sie gerne.",
+    title: "Kontakt zur Gießerei: Anfrage für Wien & Niederösterreich",
+    description: "Senden Sie uns Ihre Anfrage. Wir beraten Sie persönlich zu Guss-Projekten, Stiegenziergittern & Industrieguss. Antwort in 48h.",
 };
 
 export default function Kontakt() {

@@ -3,8 +3,8 @@ import { ArrowRight, History, Award, Users, Target } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Über Intrapex - Tradition & Innovation | Familienunternehmen",
-    description: "Erfahren Sie mehr über die Geschichte von Intrapex. Gegründet 1974 von Ing. Heinrich Winkler, geführt in 2. Generation von Wolfgang Winkler.",
+    title: "Über Intrapex: Ihr Gießerei-Experte in Österreich",
+    description: "Seit 1974 Ihr zuverlässiger Partner für Gusslösungen in Wien & Niederösterreich. Tradition, Qualität und Handschlagqualität.",
 };
 
 export default function About() {
