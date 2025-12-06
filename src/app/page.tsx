@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Settings, Globe, ShieldCheck, Star, Phone, Send, Users, Truck, CheckCircle2, Quote, HelpCircle, ChevronDown } from "lucide-react";
 import VideoTeaser from "@/components/ui/VideoTeaser";
+import ExplainerVideo from "@/components/ui/ExplainerVideo";
 
 export default function Home() {
   return (
@@ -80,7 +81,7 @@ export default function Home() {
             <div className="order-2 md:order-1 relative">
               <div className="relative aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
                 <VideoTeaser
-                  src="/gusswerk-wien.mp4"
+                  src="/Intrapex Gusswerk Wien.mp4"
                   subtitle="Intrapex Ihr Partner für individuellen Guss"
                 />
               </div>
@@ -119,6 +120,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Explainer Video Section */}
+      <ExplainerVideo src="/gusswerk-wien.mp4" />
 
       {/* Services Showcase */}
       <section className="py-24 bg-white">
