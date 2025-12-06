@@ -23,13 +23,22 @@ export default function Leistungen() {
             <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
-                    {/* Sidebar Navigation (Visual) */}
-                    <div className="hidden lg:block space-y-2 sticky top-24 h-fit">
+                    {/* Sidebar Navigation */}
+                    <div className="hidden lg:block space-y-2 sticky top-28 h-fit">
                         <h3 className="text-slate-900 font-bold uppercase tracking-widest text-sm mb-6 pl-4 border-l-4 border-orange-500">Überblick</h3>
-                        {['Fertigung & Serien', 'Modellbau', 'Nachbearbeitung', 'Logistik'].map((item) => (
-                            <div key={item} className="block px-4 py-3 text-slate-600 hover:text-orange-600 hover:bg-white hover:shadow-sm rounded-lg transition-all cursor-pointer font-medium">
-                                {item}
-                            </div>
+                        {[
+                            { name: 'Fertigung & Serien', id: 'fertigung' },
+                            { name: 'Modellbau', id: 'modellbau' },
+                            { name: 'Nachbearbeitung', id: 'nachbearbeitung' },
+                            { name: 'Logistik', id: 'logistik' }
+                        ].map((item) => (
+                            <Link
+                                key={item.id}
+                                href={`#${item.id}`}
+                                className="block px-4 py-3 text-slate-600 hover:text-orange-600 hover:bg-white hover:shadow-sm rounded-lg transition-all cursor-pointer font-medium"
+                            >
+                                {item.name}
+                            </Link>
                         ))}
                     </div>
 
@@ -37,7 +46,7 @@ export default function Leistungen() {
                     <div className="lg:col-span-2 space-y-16">
 
                         {/* Block 1: Fertigung */}
-                        <div id="fertigung" className="scroll-mt-28">
+                        <div id="fertigung" className="scroll-mt-32">
                             <div className="flex items-center gap-4 mb-6">
                                 <div className="h-12 w-12 rounded-xl bg-orange-100 flex items-center justify-center text-orange-600">
                                     <Layers className="h-6 w-6" />
@@ -66,7 +75,7 @@ export default function Leistungen() {
                         <div className="w-full h-px bg-slate-200"></div>
 
                         {/* Block 2: Modellbau */}
-                        <div id="modellbau" className="scroll-mt-28">
+                        <div id="modellbau" className="scroll-mt-32">
                             <div className="flex items-center gap-4 mb-6">
                                 <div className="h-12 w-12 rounded-xl bg-blue-100 flex items-center justify-center text-blue-600">
                                     <Compass className="h-6 w-6" />
@@ -94,13 +103,13 @@ export default function Leistungen() {
 
                         <div className="w-full h-px bg-slate-200"></div>
 
-                        {/* Block 3: Full Service */}
-                        <div id="service" className="scroll-mt-28">
+                        {/* Block 3: Nachbearbeitung */}
+                        <div id="nachbearbeitung" className="scroll-mt-32">
                             <div className="flex items-center gap-4 mb-6">
                                 <div className="h-12 w-12 rounded-xl bg-slate-200 flex items-center justify-center text-slate-700">
                                     <Hammer className="h-6 w-6" />
                                 </div>
-                                <h2 className="text-3xl font-serif font-bold text-slate-900">Full-Service</h2>
+                                <h2 className="text-3xl font-serif font-bold text-slate-900">Nachbearbeitung</h2>
                             </div>
                             <p className="text-slate-600 text-lg leading-relaxed mb-6">
                                 Auf Wunsch liefern wir Ihnen nicht nur den Rohguss, sondern das fertig bearbeitete Bauteil.
@@ -109,15 +118,48 @@ export default function Leistungen() {
                                 <div className="absolute top-0 right-0 p-32 bg-orange-500/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
                                 <div className="relative z-10 grid sm:grid-cols-2 gap-8">
                                     <div>
-                                        <h4 className="font-bold text-lg mb-2 flex items-center gap-2"><PenTool className="h-4 w-4 text-orange-400" /> Bearbeitung</h4>
+                                        <h4 className="font-bold text-lg mb-2 flex items-center gap-2"><PenTool className="h-4 w-4 text-orange-400" /> Mechanische Bearbeitung</h4>
                                         <p className="text-slate-400 text-sm">Drehen, Fräsen, Bohren. CNC-Präzisionsbearbeitung nach Ihren Vorgaben.</p>
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-lg mb-2 flex items-center gap-2"><Box className="h-4 w-4 text-orange-400" /> Oberflächen</h4>
-                                        <p className="text-slate-400 text-sm">Grundieren, Lackieren, Verzinken oder Pulverbeschichten für optimalen Schutz.</p>
+                                        <h4 className="font-bold text-lg mb-2 flex items-center gap-2"><Box className="h-4 w-4 text-orange-400" /> Oberflächenschutz</h4>
+                                        <p className="text-slate-400 text-sm">Grundieren, Lackieren, Verzinken oder Pulverbeschichten für optimalen Korrosionsschutz.</p>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div className="w-full h-px bg-slate-200"></div>
+
+                        {/* Block 4: Logistik */}
+                        <div id="logistik" className="scroll-mt-32">
+                            <div className="flex items-center gap-4 mb-6">
+                                <div className="h-12 w-12 rounded-xl bg-green-100 flex items-center justify-center text-green-600">
+                                    <Truck className="h-6 w-6" />
+                                </div>
+                                <h2 className="text-3xl font-serif font-bold text-slate-900">Logistik & Lager</h2>
+                            </div>
+                            <p className="text-slate-600 text-lg leading-relaxed mb-6">
+                                Wir übernehmen die komplette Logistikabwicklung. Von der zwischenzeitlichen Einlagerung bis zur Just-in-Time Lieferung auf Ihre Baustelle oder in Ihre Fertigungshalle.
+                            </p>
+                            <ul className="grid sm:grid-cols-2 gap-4">
+                                <li className="bg-white p-4 rounded-lg border border-slate-100 flex items-center gap-3 shadow-sm">
+                                    <CheckCircle className="h-4 w-4 text-green-600" />
+                                    <span className="text-slate-700 font-medium">Just-in-Time Lieferung</span>
+                                </li>
+                                <li className="bg-white p-4 rounded-lg border border-slate-100 flex items-center gap-3 shadow-sm">
+                                    <CheckCircle className="h-4 w-4 text-green-600" />
+                                    <span className="text-slate-700 font-medium">Sichere Verpackung</span>
+                                </li>
+                                <li className="bg-white p-4 rounded-lg border border-slate-100 flex items-center gap-3 shadow-sm">
+                                    <CheckCircle className="h-4 w-4 text-green-600" />
+                                    <span className="text-slate-700 font-medium">Zollabwicklung</span>
+                                </li>
+                                <li className="bg-white p-4 rounded-lg border border-slate-100 flex items-center gap-3 shadow-sm">
+                                    <CheckCircle className="h-4 w-4 text-green-600" />
+                                    <span className="text-slate-700 font-medium">Zwischenlagerung</span>
+                                </li>
+                            </ul>
                         </div>
 
                     </div>

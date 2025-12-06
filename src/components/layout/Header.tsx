@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
@@ -32,19 +33,22 @@ export function Header() {
         <header
             className={cn(
                 "fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent",
-                scrolled ? "bg-white/90 backdrop-blur-md shadow-md border-slate-200 py-3" : "bg-transparent py-5"
+                "bg-white/95 backdrop-blur-md shadow-sm border-slate-200 py-3"
             )}
         >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
                     {/* Logo */}
-                    <Link href="/" className="flex flex-col group">
-                        <span className={cn("text-2xl font-serif font-black tracking-tighter uppercase transition-colors", scrolled ? "text-slate-900" : "text-white")}>
-                            Intrapex
-                        </span>
-                        <span className={cn("text-[0.65rem] tracking-[0.2em] font-medium uppercase transition-colors", scrolled ? "text-slate-500" : "text-slate-300")}>
-                            Guss & Design
-                        </span>
+                    <Link href="/" className="flex items-center">
+                        <div className="relative h-10 w-40 md:h-12 md:w-48">
+                            <Image
+                                src="/logo-intrapex.png"
+                                alt="Intrapex Gießerei Logo"
+                                fill
+                                className="object-contain object-left"
+                                priority
+                            />
+                        </div>
                     </Link>
 
                     {/* Desktop Nav */}
@@ -54,10 +58,8 @@ export function Header() {
                                 key={item.href}
                                 href={item.href}
                                 className={cn(
-                                    "text-sm font-bold uppercase tracking-wide transition-colors relative py-1 hover:text-orange-500",
-                                    pathname === item.href
-                                        ? "text-orange-500 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-orange-500"
-                                        : scrolled ? "text-slate-700" : "text-white/90"
+                                    "text-sm font-bold uppercase tracking-wide transition-colors relative py-1 hover:text-orange-500 text-slate-700",
+                                    pathname === item.href && "text-orange-500 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-orange-500"
                                 )}
                             >
                                 {item.name}
@@ -67,9 +69,7 @@ export function Header() {
                             href="tel:+436644503177"
                             className={cn(
                                 "ml-4 flex items-center gap-2 px-4 py-2 rounded-full font-bold text-sm transition-all shadow-sm hover:shadow-md",
-                                scrolled
-                                    ? "bg-slate-900 text-white hover:bg-orange-600"
-                                    : "bg-white text-slate-900 hover:bg-orange-50"
+                                "bg-slate-900 text-white hover:bg-orange-600"
                             )}
                         >
                             <Phone className="h-4 w-4" /> <span>+43 664 450 31 77</span>
@@ -83,9 +83,9 @@ export function Header() {
                         aria-label="Menu"
                     >
                         {isOpen ? (
-                            <X className={cn("h-6 w-6", scrolled ? "text-slate-900" : "text-white")} />
+                            <X className="h-6 w-6 text-slate-900" />
                         ) : (
-                            <Menu className={cn("h-6 w-6", scrolled ? "text-slate-900" : "text-white")} />
+                            <Menu className="h-6 w-6 text-slate-900" />
                         )}
                     </button>
                 </div>

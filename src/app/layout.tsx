@@ -19,6 +19,9 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "Intrapex - Gusslösungen & Stiegenziergitter",
   description: "Ihr Netzwerk für hochwertige Gusslösungen in Europa. Spezialisiert auf Stiegenziergitter, Grauguss und Sonderanfertigungen.",
+  icons: {
+    icon: "/logo-intrapex.png",
+  },
 };
 
 export default function RootLayout({
