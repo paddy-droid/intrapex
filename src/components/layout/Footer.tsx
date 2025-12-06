@@ -5,7 +5,7 @@ export function Footer() {
     return (
         <footer className="bg-slate-950 text-slate-300 border-t border-slate-900 mt-auto">
             <div className="container mx-auto px-4 py-16">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
 
                     {/* Brand */}
                     <div className="space-y-4">
@@ -21,19 +21,31 @@ export function Footer() {
                         <ul className="space-y-3 text-sm">
                             <li><Link href="/leistungen" className="hover:text-orange-500 transition-colors">Leistungen</Link></li>
                             <li><Link href="/materialien" className="hover:text-orange-500 transition-colors">Materialien</Link></li>
-                            <li><Link href="/stiegenziergitter-wien" className="hover:text-orange-500 transition-colors">Stiegenziergitter Wien</Link></li>
-                            <li><Link href="/stiegenziergitter-niederoesterreich" className="hover:text-orange-500 transition-colors">Stiegenziergitter NÖ</Link></li>
+                            <li><Link href="/ueber-uns" className="hover:text-orange-500 transition-colors">Über Uns</Link></li>
+                            <li><Link href="/kontakt" className="hover:text-orange-500 transition-colors">Kontakt</Link></li>
                         </ul>
                     </div>
 
-                    {/* Company */}
+                    {/* Regionen */}
                     <div>
-                        <h4 className="text-white font-bold mb-6 font-serif">Unternehmen</h4>
+                        <h4 className="text-white font-bold mb-6 font-serif">Service-Regionen</h4>
                         <ul className="space-y-3 text-sm">
-                            <li><Link href="/ueber-uns" className="hover:text-orange-500 transition-colors">Über Uns</Link></li>
-                            <li><Link href="/kontakt" className="hover:text-orange-500 transition-colors">Kontakt</Link></li>
-                            <li><Link href="#" className="hover:text-orange-500 transition-colors">Impressum</Link></li>
-                            <li><Link href="#" className="hover:text-orange-500 transition-colors">Datenschutz</Link></li>
+                            <li><Link href="/giesserei-wien" className="hover:text-orange-500 transition-colors">Gießerei Wien</Link></li>
+                            <li><Link href="/giesserei-niederoesterreich" className="hover:text-orange-500 transition-colors">Gießerei NÖ</Link></li>
+                            <li><Link href="/giesserei-oberoesterreich" className="hover:text-orange-500 transition-colors">Gießerei OÖ</Link></li>
+                            <li><Link href="/giesserei-salzburg" className="hover:text-orange-500 transition-colors">Gießerei Salzburg</Link></li>
+                            <li><Link href="/giesserei-steiermark" className="hover:text-orange-500 transition-colors">Gießerei Steiermark</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Regionen 2 / Company combined? No, keeping structural integrity */}
+                    <div>
+                        <h4 className="text-white font-bold mb-6 font-serif">Österreich</h4>
+                        <ul className="space-y-3 text-sm">
+                            <li><Link href="/giesserei-tirol" className="hover:text-orange-500 transition-colors">Gießerei Tirol</Link></li>
+                            <li><Link href="/giesserei-vorarlberg" className="hover:text-orange-500 transition-colors">Gießerei Vorarlberg</Link></li>
+                            <li><Link href="/giesserei-kaernten" className="hover:text-orange-500 transition-colors">Gießerei Kärnten</Link></li>
+                            <li><Link href="/giesserei-burgenland" className="hover:text-orange-500 transition-colors">Gießerei Burgenland</Link></li>
                         </ul>
                     </div>
 
