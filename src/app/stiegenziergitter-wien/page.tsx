@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, MapPin, Star, Phone, CheckCircle, Package, Clock, Fence } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -15,7 +16,13 @@ export default function StiegenziergitterWien() {
             <section className="relative w-full py-24 lg:py-32 flex items-center justify-center overflow-hidden bg-slate-900">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-800 via-slate-950 to-black opacity-90 z-0"></div>
                 {/* Background image: Old Viennese staircase */}
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541434199-84724b11f324?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-center opacity-30 mix-blend-overlay z-0"></div>
+                <Image
+                    src="/stiegen-ziergitter-wien.webp"
+                    alt="Historisches Wiener Stiegenhaus mit gusseisernem Geländer"
+                    fill
+                    className="object-cover opacity-30 mix-blend-overlay z-0"
+                    priority
+                />
 
                 <div className="container relative z-10 px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 backdrop-blur-md mb-8 animate-fade-in-up">
@@ -103,7 +110,12 @@ export default function StiegenziergitterWien() {
 
                         {/* Image/Visual - Garden Fence Context */}
                         <div className="relative h-[500px] bg-slate-100 rounded-3xl overflow-hidden shadow-2xl group border border-slate-100">
-                            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1599619351208-3e6c839d6828?q=80&w=2672&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"></div>
+                            <Image
+                                src="/stiegen-ziergitter-qualitaetskontrolle.webp"
+                                alt="Gussmodelle und Qualitätskontrolle für Zäune und Gitter"
+                                fill
+                                className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                            />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent"></div>
                             <div className="absolute bottom-8 left-8 right-8 text-white">
                                 <div className="flex items-center gap-2 mb-2">

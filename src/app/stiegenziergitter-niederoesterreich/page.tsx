@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Factory, MapPin, CheckCircle, Phone, FileText, LayoutGrid, Hammer, ShieldCheck, Ruler, HelpCircle, ChevronDown } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -13,7 +14,14 @@ export default function StiegenziergitterNOE() {
             {/* Hero Section */}
             <section className="relative w-full py-24 lg:py-32 flex items-center justify-center overflow-hidden bg-slate-900">
                 <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-950 opacity-90 z-0"></div>
-                {/* Subtle geometric pattern overlay could go here */}
+                {/* Background image: Quality Control/Production */}
+                <Image
+                    src="/stiegen-ziergitter-qualitaetskontrolle.webp"
+                    alt="Qualitätskontrolle von Gussmodellen für Stiegenziergitter"
+                    fill
+                    className="object-cover opacity-20 mix-blend-overlay z-0"
+                    priority
+                />
 
                 <div className="container relative z-10 px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mb-8 animate-fade-in-up">

@@ -155,7 +155,12 @@ export default function Home() {
             {/* Service 2: Stiegenziergitter (Highlight) */}
             <div className="group relative h-96 rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all lg:col-span-2">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-900/80 to-slate-900/40 z-10"></div>
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541434199-84724b11f324?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
+              <Image
+                src="/stiegen-ziergitter-wien.webp"
+                alt="Historische Stiegenziergitter Wien - Restaurierung und Nachguss"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
               <div className="absolute bottom-0 left-0 p-10 z-20 w-full max-w-2xl">
                 <span className="inline-block px-3 py-1 bg-orange-600 text-white text-xs font-bold uppercase tracking-wider rounded mb-4">Spezialgebiet</span>
                 <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-3">Stiegenziergitter Wien & NÖ</h3>
