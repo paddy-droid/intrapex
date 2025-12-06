@@ -80,7 +80,7 @@ export default function Home() {
             <div className="order-2 md:order-1 relative">
               <div className="relative aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
                 <VideoTeaser
-                  src="/Intrapex Gusswerk Wien.mp4"
+                  src="/gusswerk-wien.mp4"
                   subtitle="Intrapex Ihr Partner für individuellen Guss"
                 />
               </div>
@@ -133,7 +133,12 @@ export default function Home() {
             {/* Service 1: Grauguss */}
             <div className="group relative h-96 rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all">
               <div className="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/30 transition-colors z-10"></div>
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618376373752-9443c5163f9d?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110"></div>
+              <Image
+                src="/industrieguss-serien.webp"
+                alt="Industrieguss & Serien - Grauguss, Sphäroguss und Stahl"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
+              />
               <div className="absolute bottom-0 left-0 p-8 z-20 w-full">
                 <div className="h-1 w-12 bg-orange-500 mb-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"></div>
                 <h3 className="text-2xl font-serif font-bold text-white mb-2">Industrieguss & Serien</h3>
