@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import VideoTeaser from "@/components/ui/VideoTeaser";
 import ExplainerVideo from "@/components/ui/ExplainerVideo";
+import PortfolioFlipCard from "@/components/ui/PortfolioFlipCard";
 
 import type { Metadata } from "next";
 
@@ -364,88 +365,127 @@ export default function Home() {
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Service 1: Grauguss */}
-            <div className="group relative h-96 rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all">
-              <div className="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/30 transition-colors z-10"></div>
-              <Image
-                src="/industrieguss-serien.webp"
-                alt="Industrieguss & Serien - Grauguss, Sphäroguss und Stahl"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute bottom-0 left-0 p-8 z-20 w-full">
-                <div className="h-1 w-12 bg-orange-500 mb-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"></div>
-                <h3 className="text-2xl font-serif font-bold text-white mb-2">
-                  Industrieguss & Serien
-                </h3>
-                <p className="text-slate-200 text-sm opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-75">
-                  Grauguss, Sphäroguss und Stahl für höchste industrielle
-                  Ansprüche.
-                </p>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            {/* Case Study 1: Wien Architecture */}
+            <PortfolioFlipCard
+              overTitle="Der Wien-Klassiker"
+              title="Altbau-Sanierung 1010 Wien"
+              imageSrc="/stiegen-ziergitter-wien.webp"
+              challenge="Rekonstruktion historischer Balkongeländer nach Sturmschaden. Originalpläne fehlten, nur Fragmente vorhanden."
+              solution="3D-Scan der Bruchstücke, Erstellung neuer Gussmodelle, Guss in Grauguss (EN-GJL-200) und denkmalgerechte Lackierung."
+              result="Perfekte Optik, Montagefreigabe durch Bundesdenkmalamt."
+            />
+
+            {/* Case Study 2: Industry NÖ */}
+            <PortfolioFlipCard
+              overTitle="Der Industrie-Power"
+              title="Pumpengehäuse für Agrartechnik"
+              imageSrc="/industrieguss-serien.webp"
+              challenge="Dringender Ersatzteilbedarf für eine Großanlage im Bezirk Baden. Stillstandskosten drohten."
+              solution="Express-Modellbau und Abguss in Sphäroguss (EN-GJS-400-15) innerhalb von 10 Tagen statt 8 Wochen."
+              result="Anlage lief wieder pünktlich zur Erntezeit. Kostenersparnis: 60% gegenüber Neumaschine."
+            />
+
+            {/* Case Study 3: Heavy Duty (Synthesized based on table data) */}
+            <PortfolioFlipCard
+              overTitle="Der Hardcore-Einsatz"
+              title="Verschleißteile Steinbruch"
+              imageSrc="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2670&auto=format&fit=crop"
+              challenge="Extremer Abrasionsverschleiß an Brecherplatten führt zu wöchentlichen Ausfällen und hohen Kosten."
+              solution="Umstellung auf hochverschleißfesten Chrom-Hartguss und Optimierung der Gussgeometrie."
+              result="Standzeit verdreifacht, Wartungsintervalle von 1 auf 3 Wochen verlängert."
+            />
+          </div>
+
+          {/* Technical Specs Table */}
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-10">
+              <h3 className="text-2xl font-serif font-bold text-slate-900">
+                Technische Kapazitäten
+              </h3>
+              <p className="text-slate-600">
+                Wichtige Daten für Ingenieure und Einkäufer.
+              </p>
             </div>
 
-            {/* Service 2: Stiegenziergitter (Highlight) */}
-            <div className="group relative h-96 rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all lg:col-span-2">
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-900/80 to-slate-900/40 z-10"></div>
-              <Image
-                src="/stiegen-ziergitter-wien.webp"
-                alt="Historische Stiegenziergitter Wien - Restaurierung und Nachguss"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute bottom-0 left-0 p-10 z-20 w-full max-w-2xl">
-                <span className="inline-block px-3 py-1 bg-orange-600 text-white text-xs font-bold uppercase tracking-wider rounded mb-4">
-                  Spezialgebiet
-                </span>
-                <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-3">
-                  Stiegenziergitter Wien & NÖ
-                </h3>
-                <p className="text-slate-100 text-lg mb-6 opacity-90">
-                  Wir rekonstruieren defekte Ziergitter nach Originalvorlage für
-                  Wiener Zinshäuser und Schlösser.
-                </p>
-                <Link
-                  href="/stiegenziergitter-wien"
-                  className="inline-flex items-center gap-2 text-white font-bold hover:text-orange-200 transition-colors border-b border-white/30 hover:border-white pb-1"
-                >
-                  Zur Spezialseite <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-
-            {/* Service 3: Materials */}
-            <div className="group relative h-96 rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all bg-slate-900 border border-slate-800">
-              <div className="absolute inset-0 flex flex-col justify-center items-center p-8 text-center z-10">
-                <Settings className="h-16 w-16 text-slate-700 group-hover:text-orange-500 transition-colors duration-300 mb-6" />
-                <h3 className="text-2xl font-serif font-bold text-white mb-3">
-                  Sonderlegierungen
-                </h3>
-                <p className="text-slate-400 mb-6 px-4">
-                  Aluminium, Kupfer, Bronze. Wir finden die perfekte Legierung
-                  für Ihre spezifische Anforderung.
-                </p>
-                <Link
-                  href="/materialien"
-                  className="px-6 py-2 rounded-full border border-slate-700 text-slate-300 text-sm font-bold group-hover:bg-orange-600 group-hover:border-orange-600 group-hover:text-white transition-all"
-                >
-                  Materialübersicht
-                </Link>
-              </div>
-            </div>
-            {/* Service 4: Modellbau */}
-            <div className="group relative h-96 rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all md:col-span-2 lg:col-span-2">
-              <div className="absolute inset-0 bg-slate-900/60 group-hover:bg-slate-900/40 transition-colors z-10"></div>
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
-              <div className="absolute bottom-0 left-0 p-8 z-20 w-full">
-                <h3 className="text-2xl font-serif font-bold text-white mb-2">
-                  Modellbau & Engineering
-                </h3>
-                <p className="text-slate-200 text-sm max-w-lg">
-                  Von der Handskizze zum fertigen Modell. Wir unterstützen Sie
-                  bei der Entwicklung und Optimierung Ihrer Gussteile.
-                </p>
+            <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-xl bg-white">
+              <div className="overflow-x-auto">
+                <table className="w-full text-left border-collapse">
+                  <thead className="bg-slate-900 text-white">
+                    <tr>
+                      <th className="p-4 md:p-5 font-bold border-b border-slate-800 whitespace-nowrap">
+                        Werkstoff
+                      </th>
+                      <th className="p-4 md:p-5 font-bold border-b border-slate-800 whitespace-nowrap">
+                        Normen (Auszug)
+                      </th>
+                      <th className="p-4 md:p-5 font-bold border-b border-slate-800 whitespace-nowrap">
+                        Gewichte
+                      </th>
+                      <th className="p-4 md:p-5 font-bold border-b border-slate-800 whitespace-nowrap">
+                        Anwendungen
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-slate-700 divide-y divide-slate-100">
+                    <tr className="hover:bg-slate-50 transition-colors">
+                      <td className="p-4 md:p-5 font-bold text-slate-900">
+                        Grauguss
+                      </td>
+                      <td className="p-4 md:p-5 font-mono text-xs md:text-sm bg-slate-50/50">
+                        EN-GJL-150 bis 300
+                      </td>
+                      <td className="p-4 md:p-5 whitespace-nowrap">
+                        0,5 kg bis 8.000 kg
+                      </td>
+                      <td className="p-4 md:p-5 text-sm">
+                        Maschinensockel, Kanalguss, Öfen
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-slate-50 transition-colors">
+                      <td className="p-4 md:p-5 font-bold text-slate-900">
+                        Sphäroguss
+                      </td>
+                      <td className="p-4 md:p-5 font-mono text-xs md:text-sm bg-slate-50/50">
+                        EN-GJS-400 bis 700
+                      </td>
+                      <td className="p-4 md:p-5 whitespace-nowrap">
+                        0,5 kg bis 3.000 kg
+                      </td>
+                      <td className="p-4 md:p-5 text-sm">
+                        Fahrwerksteile, Armaturen, Zahnräder
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-slate-50 transition-colors">
+                      <td className="p-4 md:p-5 font-bold text-slate-900">
+                        Stahlguss
+                      </td>
+                      <td className="p-4 md:p-5 font-mono text-xs md:text-sm bg-slate-50/50">
+                        GS-45 bis GS-60
+                      </td>
+                      <td className="p-4 md:p-5 whitespace-nowrap">
+                        10 kg bis 5.000 kg
+                      </td>
+                      <td className="p-4 md:p-5 text-sm">
+                        Hochbelastete Bauteile, Verschleißteile
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-slate-50 transition-colors">
+                      <td className="p-4 md:p-5 font-bold text-slate-900">
+                        Aluminium
+                      </td>
+                      <td className="p-4 md:p-5 font-mono text-xs md:text-sm bg-slate-50/50">
+                        AlSi-Legierungen
+                      </td>
+                      <td className="p-4 md:p-5 whitespace-nowrap">
+                        0,1 kg bis 500 kg
+                      </td>
+                      <td className="p-4 md:p-5 text-sm">
+                        Leichtbau, Gehäuse, Motorenteile
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
