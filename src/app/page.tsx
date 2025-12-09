@@ -20,6 +20,10 @@ import {
 import VideoTeaser from "@/components/ui/VideoTeaser";
 import ExplainerVideo from "@/components/ui/ExplainerVideo";
 import PortfolioFlipCard from "@/components/ui/PortfolioFlipCard";
+import { ProblemSolutionSection } from "@/components/sections/ProblemSolutionSection";
+import { NicheServicesSection } from "@/components/sections/NicheServicesSection";
+import { IndustrialDeepDiveSection } from "@/components/sections/IndustrialDeepDiveSection";
+import { TechnicalDataSection } from "@/components/sections/TechnicalDataSection";
 
 import type { Metadata } from "next";
 
@@ -353,6 +357,12 @@ export default function Home() {
       {/* Explainer Video Section */}
       <ExplainerVideo src="/gusswerk-wien.mp4" />
 
+      {/* NEW SECTION 3: Spare Parts & Reverse Engineering (High Conversion) */}
+      <ProblemSolutionSection />
+
+      {/* NEW SECTION 4: Niche Services (The "Wow" Effect) */}
+      <NicheServicesSection />
+
       {/* Services Showcase */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -397,103 +407,15 @@ export default function Home() {
             />
           </div>
 
-          {/* Technical Specs Table */}
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-10">
-              <h3 className="text-2xl font-serif font-bold text-slate-900">
-                Technische Kapazitäten
-              </h3>
-              <p className="text-slate-600">
-                Wichtige Daten für Ingenieure und Einkäufer.
-              </p>
-            </div>
-
-            <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-xl bg-white">
-              <div className="overflow-x-auto">
-                <table className="w-full text-left border-collapse">
-                  <thead className="bg-slate-900 text-white">
-                    <tr>
-                      <th className="p-4 md:p-5 font-bold border-b border-slate-800 whitespace-nowrap">
-                        Werkstoff
-                      </th>
-                      <th className="p-4 md:p-5 font-bold border-b border-slate-800 whitespace-nowrap">
-                        Normen (Auszug)
-                      </th>
-                      <th className="p-4 md:p-5 font-bold border-b border-slate-800 whitespace-nowrap">
-                        Gewichte
-                      </th>
-                      <th className="p-4 md:p-5 font-bold border-b border-slate-800 whitespace-nowrap">
-                        Anwendungen
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-slate-700 divide-y divide-slate-100">
-                    <tr className="hover:bg-slate-50 transition-colors">
-                      <td className="p-4 md:p-5 font-bold text-slate-900">
-                        Grauguss
-                      </td>
-                      <td className="p-4 md:p-5 font-mono text-xs md:text-sm bg-slate-50/50">
-                        EN-GJL-150 bis 300
-                      </td>
-                      <td className="p-4 md:p-5 whitespace-nowrap">
-                        0,5 kg bis 8.000 kg
-                      </td>
-                      <td className="p-4 md:p-5 text-sm">
-                        Maschinensockel, Kanalguss, Öfen
-                      </td>
-                    </tr>
-                    <tr className="hover:bg-slate-50 transition-colors">
-                      <td className="p-4 md:p-5 font-bold text-slate-900">
-                        Sphäroguss
-                      </td>
-                      <td className="p-4 md:p-5 font-mono text-xs md:text-sm bg-slate-50/50">
-                        EN-GJS-400 bis 700
-                      </td>
-                      <td className="p-4 md:p-5 whitespace-nowrap">
-                        0,5 kg bis 3.000 kg
-                      </td>
-                      <td className="p-4 md:p-5 text-sm">
-                        Fahrwerksteile, Armaturen, Zahnräder
-                      </td>
-                    </tr>
-                    <tr className="hover:bg-slate-50 transition-colors">
-                      <td className="p-4 md:p-5 font-bold text-slate-900">
-                        Stahlguss
-                      </td>
-                      <td className="p-4 md:p-5 font-mono text-xs md:text-sm bg-slate-50/50">
-                        GS-45 bis GS-60
-                      </td>
-                      <td className="p-4 md:p-5 whitespace-nowrap">
-                        10 kg bis 5.000 kg
-                      </td>
-                      <td className="p-4 md:p-5 text-sm">
-                        Hochbelastete Bauteile, Verschleißteile
-                      </td>
-                    </tr>
-                    <tr className="hover:bg-slate-50 transition-colors">
-                      <td className="p-4 md:p-5 font-bold text-slate-900">
-                        Aluminium
-                      </td>
-                      <td className="p-4 md:p-5 font-mono text-xs md:text-sm bg-slate-50/50">
-                        AlSi-Legierungen
-                      </td>
-                      <td className="p-4 md:p-5 whitespace-nowrap">
-                        0,1 kg bis 500 kg
-                      </td>
-                      <td className="p-4 md:p-5 text-sm">
-                        Leichtbau, Gehäuse, Motorenteile
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
+      <IndustrialDeepDiveSection />
+
+      <TechnicalDataSection />
+
       {/* 3-Step Process - Premium Redesign */}
-      <section className="py-24 bg-slate-50 overflow-hidden">
+      < section className="py-24 bg-slate-50 overflow-hidden" >
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-sm font-bold text-orange-600 uppercase tracking-widest mb-3">
@@ -610,10 +532,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Why Us Grid (New) */}
-      <section className="py-24 bg-white border-t border-slate-100">
+      < section className="py-24 bg-white border-t border-slate-100" >
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-slate-50 p-6 rounded-2xl hover:bg-orange-50 transition-colors">
@@ -652,10 +574,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Testimonials Section */}
-      <section className="py-24 bg-slate-50">
+      < section className="py-24 bg-slate-50" >
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-sm font-bold text-orange-600 uppercase tracking-widest mb-3">
@@ -735,10 +657,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* FAQ Section */}
-      <section className="py-24 bg-white">
+      < section className="py-24 bg-white" >
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-sm font-bold text-orange-600 uppercase tracking-widest mb-3">
@@ -819,10 +741,10 @@ export default function Home() {
             </details>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* CTA Bottom */}
-      <section className="py-24 bg-slate-900 relative overflow-hidden">
+      < section className="py-24 bg-slate-900 relative overflow-hidden" >
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-800 to-slate-950 opacity-50"></div>
         <div className="container relative z-10 mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
@@ -847,7 +769,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </section>
-    </div>
+      </section >
+    </div >
   );
 }

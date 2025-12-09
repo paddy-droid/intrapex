@@ -9,6 +9,11 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 
+import { ProblemSolutionSection } from "@/components/sections/ProblemSolutionSection";
+import { NicheServicesSection } from "@/components/sections/NicheServicesSection";
+import { IndustrialDeepDiveSection } from "@/components/sections/IndustrialDeepDiveSection";
+import { TechnicalDataSection } from "@/components/sections/TechnicalDataSection";
+
 export const metadata: Metadata = {
     title: "Gießerei Burgenland | Restaurierung & Bauguss Intrapex",
     description: "Ihr Partner für Gießerei-Produkte im Burgenland. Spezialisiert auf Kunstguss für Schlösser und Weingüter sowie Ersatzteile für die Landwirtschaft im Seewinkel.",
@@ -183,52 +188,12 @@ export default function GiessereiBurgenland() {
                 </div>
             </section>
 
-            {/* 4. Technical Data Table */}
-            <section className="py-24 bg-slate-50">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-4xl mx-auto">
-                        <div className="text-center mb-12">
-                            <h2 className="text-3xl font-serif font-bold text-slate-900 mb-4">Gießer-Fakten</h2>
-                            <p className="text-slate-600">Handwerkliche Details für Burgenlands Bauherren.</p>
-                        </div>
+            <ProblemSolutionSection region="Burgenland" />
 
-                        <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
-                            <div className="overflow-x-auto">
-                                <table className="w-full text-left text-sm">
-                                    <thead className="bg-slate-900 text-white">
-                                        <tr>
-                                            <th className="px-6 py-4 font-bold uppercase tracking-wider">Merkmal</th>
-                                            <th className="px-6 py-4 font-bold uppercase tracking-wider">Ausführung</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="divide-y divide-slate-100">
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Stilepochen</td>
-                                            <td className="px-6 py-4 text-slate-600">Barock, Klassizismus, Biedermeier, Jugendstil (großer Modellfundus)</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Einzelanfertigung</td>
-                                            <td className="px-6 py-4 text-slate-600">Ja, ab Stückzahl 1 (Handformguss)</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Restaurierung</td>
-                                            <td className="px-6 py-4 text-slate-600">Sandstrahlen, Reparaturschweißen, Ergänzungsguss</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Montage</td>
-                                            <td className="px-6 py-4 text-slate-600">Vermittlung erfahrener Montagepartner im Burgenland</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Lieferzeit Bgld</td>
-                                            <td className="px-6 py-4 text-slate-600 text-orange-600 font-bold">Wöchentliche Touren entlang A3/A4/S31</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <NicheServicesSection region="Burgenland" />
+
+            <IndustrialDeepDiveSection region="Burgenland" />
+            <TechnicalDataSection region="Burgenland" />
 
             {/* Private Households Section */}
             <section className="py-24 bg-slate-50 relative overflow-hidden">

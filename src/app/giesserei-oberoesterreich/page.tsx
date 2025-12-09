@@ -9,6 +9,11 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 
+import { ProblemSolutionSection } from "@/components/sections/ProblemSolutionSection";
+import { NicheServicesSection } from "@/components/sections/NicheServicesSection";
+import { IndustrialDeepDiveSection } from "@/components/sections/IndustrialDeepDiveSection";
+import { TechnicalDataSection } from "@/components/sections/TechnicalDataSection";
+
 export const metadata: Metadata = {
     title: "Gießerei Oberösterreich | Industrieguss & Stahlindustrie Intrapex",
     description: "Ihr Spezialist für Gießerei-Produkte in Oberösterreich. Wir liefern hochbelastbaren Grauguss und Sphäroguss für die Stahl- und Maschinenbau-Industrie in Linz, Wels und Steyr.",
@@ -183,56 +188,12 @@ export default function GiessereiOberoesterreich() {
                 </div>
             </section>
 
-            {/* 4. Technical Data Table */}
-            <section className="py-24 bg-slate-50">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-4xl mx-auto">
-                        <div className="text-center mb-12">
-                            <h2 className="text-3xl font-serif font-bold text-slate-900 mb-4">Technische Spezifikationen</h2>
-                            <p className="text-slate-600">Daten für Ihre Konstruktionsabteilung.</p>
-                        </div>
+            <ProblemSolutionSection region="Oberösterreich" />
 
-                        <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
-                            <div className="overflow-x-auto">
-                                <table className="w-full text-left text-sm">
-                                    <thead className="bg-slate-900 text-white">
-                                        <tr>
-                                            <th className="px-6 py-4 font-bold uppercase tracking-wider">Eigenschaft</th>
-                                            <th className="px-6 py-4 font-bold uppercase tracking-wider">Wert / Norm</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="divide-y divide-slate-100">
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Werkstoffe</td>
-                                            <td className="px-6 py-4 text-slate-600">EN-GJL-150 bis 300 (Grauguss) | EN-GJS-400 bis 700 (Sphäroguss)</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Max. Stückgewicht</td>
-                                            <td className="px-6 py-4 text-slate-600">4.000 kg (Grauguss) | 2.500 kg (Sphäroguss)</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Formkästen</td>
-                                            <td className="px-6 py-4 text-slate-600">Standard: bis 2500x2500mm</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Oberflächen</td>
-                                            <td className="px-6 py-4 text-slate-600">Gussroh, gestrahlt, grundiert, lackiert</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Prüfverfahren</td>
-                                            <td className="px-6 py-4 text-slate-600">Spektral, Härte (Brinell), Ultraschall, Maßprotokoll</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Logistik OÖ</td>
-                                            <td className="px-6 py-4 text-slate-600 text-orange-600 font-bold">LKW-Direktlieferung in Zentralräume Linz/Wels/Steyr</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <NicheServicesSection region="Oberösterreich" />
+
+            <IndustrialDeepDiveSection region="Oberösterreich" />
+            <TechnicalDataSection region="Oberösterreich" />
 
             {/* Private Households Section */}
             <section className="py-24 bg-slate-50 relative overflow-hidden">

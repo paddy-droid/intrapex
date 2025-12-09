@@ -9,6 +9,11 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 
+import { ProblemSolutionSection } from "@/components/sections/ProblemSolutionSection";
+import { NicheServicesSection } from "@/components/sections/NicheServicesSection";
+import { IndustrialDeepDiveSection } from "@/components/sections/IndustrialDeepDiveSection";
+import { TechnicalDataSection } from "@/components/sections/TechnicalDataSection";
+
 export const metadata: Metadata = {
     title: "Gießerei Niederösterreich | Industrieguss & Kunstguss Intrapex",
     description: "Ihr leistungsstarker Partner für Gießerei-Produkte in Niederösterreich. Von St. Pölten bis Wiener Neustadt – wir liefern Grauguss und Sphäroguss höchster Güte.",
@@ -184,56 +189,12 @@ export default function GiessereiNiederoesterreich() {
                 </div>
             </section>
 
-            {/* 4. Technical Data Table */}
-            <section className="py-24 bg-slate-50">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-4xl mx-auto">
-                        <div className="text-center mb-12">
-                            <h2 className="text-3xl font-serif font-bold text-slate-900 mb-4">Technische Daten & Kapazitäten</h2>
-                            <p className="text-slate-600">Leistungsdaten für Ihre Fertigungsplanung.</p>
-                        </div>
+            <ProblemSolutionSection region="Niederösterreich" />
 
-                        <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
-                            <div className="overflow-x-auto">
-                                <table className="w-full text-left text-sm">
-                                    <thead className="bg-slate-900 text-white">
-                                        <tr>
-                                            <th className="px-6 py-4 font-bold uppercase tracking-wider">Parameter</th>
-                                            <th className="px-6 py-4 font-bold uppercase tracking-wider">Spezifikation Intrapex</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="divide-y divide-slate-100">
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Stückgewicht Grauguss</td>
-                                            <td className="px-6 py-4 text-slate-600">0,5 kg bis 4.000 kg</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Stückgewicht Sphäroguss</td>
-                                            <td className="px-6 py-4 text-slate-600">0,5 kg bis 2.500 kg</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Kastenformate</td>
-                                            <td className="px-6 py-4 text-slate-600">bis 2500 x 2500 mm (Übergrößen auf Anfrage)</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Qualitätsmanagement</td>
-                                            <td className="px-6 py-4 text-slate-600">Spektralanalyse, Härteprüfung, Ultraschallprüfung (nach Bedarf)</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Nachbearbeitung</td>
-                                            <td className="px-6 py-4 text-slate-600">Drehen, Fräsen, Bohren, Lackieren, Grundieren</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Lieferzeit NÖ</td>
-                                            <td className="px-6 py-4 text-slate-600 text-orange-600 font-bold">Standard 4-6 Wochen (Express möglich)</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <NicheServicesSection region="Niederösterreich" />
+
+            <IndustrialDeepDiveSection region="Niederösterreich" />
+            <TechnicalDataSection region="Niederösterreich" />
 
             {/* Private Households Section */}
             <section className="py-24 bg-slate-50 relative overflow-hidden">

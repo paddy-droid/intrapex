@@ -9,6 +9,11 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 
+import { ProblemSolutionSection } from "@/components/sections/ProblemSolutionSection";
+import { NicheServicesSection } from "@/components/sections/NicheServicesSection";
+import { IndustrialDeepDiveSection } from "@/components/sections/IndustrialDeepDiveSection";
+import { TechnicalDataSection } from "@/components/sections/TechnicalDataSection";
+
 export const metadata: Metadata = {
     title: "Gießerei Tirol | Kunstguss & Bauguss Intrapex",
     description: "Ihr Partner für Gießerei-Produkte in Tirol. Exklusive Gusslösungen für die alpine Hotellerie, traditionelle Architektur und den robusten Anlagenbau in Innsbruck und Kitzbühel.",
@@ -183,52 +188,12 @@ export default function GiessereiTirol() {
                 </div>
             </section>
 
-            {/* 4. Technical Data Table */}
-            <section className="py-24 bg-slate-50">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-4xl mx-auto">
-                        <div className="text-center mb-12">
-                            <h2 className="text-3xl font-serif font-bold text-slate-900 mb-4">Technische Fakten</h2>
-                            <p className="text-slate-600">Leistungswerte für Planer in Tirol.</p>
-                        </div>
+            <ProblemSolutionSection region="Tirol" />
 
-                        <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
-                            <div className="overflow-x-auto">
-                                <table className="w-full text-left text-sm">
-                                    <thead className="bg-slate-900 text-white">
-                                        <tr>
-                                            <th className="px-6 py-4 font-bold uppercase tracking-wider">Kriterium</th>
-                                            <th className="px-6 py-4 font-bold uppercase tracking-wider">Standard Intrapex</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="divide-y divide-slate-100">
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Legierungen</td>
-                                            <td className="px-6 py-4 text-slate-600">EN-GJL (Grauguss), EN-GJS (Sphäroguss), EN-GJS-400-18-LT (kaltzäh)</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Konstruktionsberatung</td>
-                                            <td className="px-6 py-4 text-slate-600">Inklusive, spezialisiert auf alpine Lastfälle (Schneedruck)</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Modellbau</td>
-                                            <td className="px-6 py-4 text-slate-600">CNC-Modellbau für hohe Präzision oder Handform für Unikate</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Korrosionsschutz</td>
-                                            <td className="px-6 py-4 text-slate-600">C1 bis C5 (hochwertige Duplex-Systeme für Außenbereich)</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Versand Tirol</td>
-                                            <td className="px-6 py-4 text-slate-600 text-orange-600 font-bold">LKW mit Hebebühne, Zustellung auch auf Baustellen</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <NicheServicesSection region="Tirol" />
+
+            <IndustrialDeepDiveSection region="Tirol" />
+            <TechnicalDataSection region="Tirol" />
 
             {/* Private Households Section */}
             <section className="py-24 bg-slate-50 relative overflow-hidden">

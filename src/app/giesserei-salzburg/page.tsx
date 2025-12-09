@@ -9,6 +9,11 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 
+import { ProblemSolutionSection } from "@/components/sections/ProblemSolutionSection";
+import { NicheServicesSection } from "@/components/sections/NicheServicesSection";
+import { IndustrialDeepDiveSection } from "@/components/sections/IndustrialDeepDiveSection";
+import { TechnicalDataSection } from "@/components/sections/TechnicalDataSection";
+
 export const metadata: Metadata = {
     title: "Gießerei Salzburg | Kunstguss & Bauguss Intrapex",
     description: "Ihr Partner für Gießerei-Produkte in Salzburg. Wir liefern exklusiven Kunstguss, historischen Bauguss und Industrieguss für den Salzburger Tourismus und die Bauwirtschaft.",
@@ -183,52 +188,12 @@ export default function GiessereiSalzburg() {
                 </div>
             </section>
 
-            {/* 4. Technical Data Table */}
-            <section className="py-24 bg-slate-50">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-4xl mx-auto">
-                        <div className="text-center mb-12">
-                            <h2 className="text-3xl font-serif font-bold text-slate-900 mb-4">Technische Datenblätter</h2>
-                            <p className="text-slate-600">Fakten für Architekten und Ingenieure.</p>
-                        </div>
+            <ProblemSolutionSection region="Salzburg" />
 
-                        <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
-                            <div className="overflow-x-auto">
-                                <table className="w-full text-left text-sm">
-                                    <thead className="bg-slate-900 text-white">
-                                        <tr>
-                                            <th className="px-6 py-4 font-bold uppercase tracking-wider">Merkmal</th>
-                                            <th className="px-6 py-4 font-bold uppercase tracking-wider">Ausprägung Intrapex</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="divide-y divide-slate-100">
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Materialvielfalt</td>
-                                            <td className="px-6 py-4 text-slate-600">Grauguss (GJL), Sphäroguss (GJS), Stahlguss (auf Anfrage)</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Oberflächengüte</td>
-                                            <td className="px-6 py-4 text-slate-600">Feine Gussstruktur für sichtbare Architekturelemente</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Maximalmaße</td>
-                                            <td className="px-6 py-4 text-slate-600">Länge bis 3.000 mm möglich (Sonderkasten)</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Beschichtung</td>
-                                            <td className="px-6 py-4 text-slate-600">Duplex-Systeme (Verzinken + Lackieren) für Korrosionsschutzklasse C4/C5</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Lieferzeit Salzburg</td>
-                                            <td className="px-6 py-4 text-slate-600 text-orange-600 font-bold">Standard 3-5 Wochen (Lagerware sofort)</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <NicheServicesSection region="Salzburg" />
+
+            <IndustrialDeepDiveSection region="Salzburg" />
+            <TechnicalDataSection region="Salzburg" />
 
             {/* Private Households Section */}
             <section className="py-24 bg-slate-50 relative overflow-hidden">

@@ -10,6 +10,11 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 
+import { ProblemSolutionSection } from "@/components/sections/ProblemSolutionSection";
+import { NicheServicesSection } from "@/components/sections/NicheServicesSection";
+import { IndustrialDeepDiveSection } from "@/components/sections/IndustrialDeepDiveSection";
+import { TechnicalDataSection } from "@/components/sections/TechnicalDataSection";
+
 export const metadata: Metadata = {
     title: "Gießerei Wien | Grauguss & Kunstguss Intrapex",
     description: "Ihre führende Gießerei für Wien. Wir bieten hochwertigen Grauguss, Sphäroguss und individuellen Kunstguss für Restaurierung und Industrie. Jetzt anfragen!",
@@ -182,56 +187,12 @@ export default function GiessereiWien() {
                 </div>
             </section>
 
-            {/* 4. Technical Data Table (NEW) */}
-            <section className="py-24 bg-slate-50">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-4xl mx-auto">
-                        <div className="text-center mb-12">
-                            <h2 className="text-3xl font-serif font-bold text-slate-900 mb-4">Technische Kapazitäten</h2>
-                            <p className="text-slate-600">Datenblatt unserer Gießerei-Leistung für Ihre Planung.</p>
-                        </div>
+            <ProblemSolutionSection region="Wien" />
 
-                        <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
-                            <div className="overflow-x-auto">
-                                <table className="w-full text-left text-sm">
-                                    <thead className="bg-slate-900 text-white">
-                                        <tr>
-                                            <th className="px-6 py-4 font-bold uppercase tracking-wider">Kategorie</th>
-                                            <th className="px-6 py-4 font-bold uppercase tracking-wider">Details / Spezifikation</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="divide-y divide-slate-100">
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Maximale Stückgewichte</td>
-                                            <td className="px-6 py-4 text-slate-600">Grauguss bis 4.000 kg | Sphäroguss bis 2.500 kg</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Kastengrößen (max.)</td>
-                                            <td className="px-6 py-4 text-slate-600">2.500 x 2.500 x 1.500 mm</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Werkstoffe (EN-Norm)</td>
-                                            <td className="px-6 py-4 text-slate-600">EN-GJL-150 bis 300 (Grauguss) | EN-GJS-400 bis 700 (Sphäroguss)</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Formverfahren</td>
-                                            <td className="px-6 py-4 text-slate-600">Handformguss (Furanharz), Maschinenformguss</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Zusatzleistungen</td>
-                                            <td className="px-6 py-4 text-slate-600">Grundierung, Lackierung, Wärmebehandlung, mechanische Bearbeitung</td>
-                                        </tr>
-                                        <tr className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-bold text-slate-900">Liefergebiet</td>
-                                            <td className="px-6 py-4 text-slate-600 text-orange-600 font-bold">Wien (alle Bezirke) & Umgebung</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <NicheServicesSection region="Wien" />
+
+            <IndustrialDeepDiveSection region="Wien" />
+            <TechnicalDataSection region="Wien" />
 
             {/* Private Households Section */}
             <section className="py-24 bg-slate-50 relative overflow-hidden">

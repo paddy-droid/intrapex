@@ -57,7 +57,7 @@ export function Header() {
                                 src="/logo-intrapex.png"
                                 alt="Intrapex Gießerei Logo"
                                 fill
-                                className="object-contain object-left"
+                                className="object-contain object-left mix-blend-multiply"
                                 priority
                             />
                         </div>
