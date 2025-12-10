@@ -74,7 +74,10 @@ export function Footer() {
             <div className="border-t border-slate-900 bg-black/20">
                 <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
                     <p>&copy; {new Date().getFullYear()} Intrapex. Alle Rechte vorbehalten.</p>
-                    <p>Designed for Excellence.</p>
+                    <div className="flex flex-col md:flex-row items-center gap-2 text-center md:text-right">
+                        <p>Designed for Excellence.</p>
+                        <p>Diese Website wurde mit ❤️ in Niederösterreich von <a href="https://www.nur.marketing/" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-400 transition-colors">nur.marketing</a> erstellt</p>
+                    </div>
                 </div>
             </div>
         </footer>
