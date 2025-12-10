@@ -24,6 +24,7 @@ import { ProblemSolutionSection } from "@/components/sections/ProblemSolutionSec
 import { NicheServicesSection } from "@/components/sections/NicheServicesSection";
 import { IndustrialDeepDiveSection } from "@/components/sections/IndustrialDeepDiveSection";
 import { TechnicalDataSection } from "@/components/sections/TechnicalDataSection";
+import { AluminumCastSection } from "@/components/sections/AluminumCastSection";
 
 import type { Metadata } from "next";
 
@@ -413,6 +414,8 @@ export default function Home() {
       <IndustrialDeepDiveSection />
 
       <TechnicalDataSection />
+
+      <AluminumCastSection />
 
       {/* 3-Step Process - Premium Redesign */}
       < section className="py-24 bg-slate-50 overflow-hidden" >

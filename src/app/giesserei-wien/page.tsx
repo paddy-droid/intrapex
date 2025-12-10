@@ -14,6 +14,7 @@ import { ProblemSolutionSection } from "@/components/sections/ProblemSolutionSec
 import { NicheServicesSection } from "@/components/sections/NicheServicesSection";
 import { IndustrialDeepDiveSection } from "@/components/sections/IndustrialDeepDiveSection";
 import { TechnicalDataSection } from "@/components/sections/TechnicalDataSection";
+import { AluminumCastSection } from "@/components/sections/AluminumCastSection";
 
 export const metadata: Metadata = {
     title: "Gießerei Wien | Grauguss & Kunstguss Intrapex",
@@ -193,6 +194,7 @@ export default function GiessereiWien() {
 
             <IndustrialDeepDiveSection region="Wien" />
             <TechnicalDataSection region="Wien" />
+            <AluminumCastSection region="Wien" />
 
             {/* Private Households Section */}
             <section className="py-24 bg-slate-50 relative overflow-hidden">

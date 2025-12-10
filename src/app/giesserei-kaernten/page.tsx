@@ -13,6 +13,7 @@ import { ProblemSolutionSection } from "@/components/sections/ProblemSolutionSec
 import { NicheServicesSection } from "@/components/sections/NicheServicesSection";
 import { IndustrialDeepDiveSection } from "@/components/sections/IndustrialDeepDiveSection";
 import { TechnicalDataSection } from "@/components/sections/TechnicalDataSection";
+import { AluminumCastSection } from "@/components/sections/AluminumCastSection";
 
 export const metadata: Metadata = {
     title: "Gießerei Kärnten | Turbinenguss & Kunstguss Intrapex",
@@ -194,6 +195,7 @@ export default function GiessereiKaernten() {
 
             <IndustrialDeepDiveSection region="Kärnten" />
             <TechnicalDataSection region="Kärnten" />
+            <AluminumCastSection region="Kärnten" />
 
             {/* Private Households Section */}
             <section className="py-24 bg-slate-50 relative overflow-hidden">
