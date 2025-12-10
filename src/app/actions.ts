@@ -21,29 +21,53 @@ export async function sendContactEmail(prevState: any, formData: FormData) {
     }
 
     // E-Mail über Resend senden
+    // Während der Entwicklung an die Test-E-Mail senden, da Resend nur Test-E-Mails erlaubt
+    const recipient = process.env.NODE_ENV === 'production'
+      ? ['office@intrapex.at']
+      : ['p.jauker.mail@gmail.com'];
+    
     const { data, error } = await resend.emails.send({
       from: 'Kontaktformular <onboarding@resend.dev>',
-      to: ['office@intrapex.at'],
-      subject: `${subject} - Nachricht von ${name}`,
-      text: `Betreff: ${subject}\n\n${message}`,
+      to: recipient,
+      subject: `${subject} - Nachricht von ${name}${process.env.NODE_ENV !== 'production' ? ' (für office@intrapex.at)' : ''}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #333;">Neue Nachricht über Kontaktformular</h2>
+          <div style="background-color: #f5f5f5; padding: 20px; border-radius: 5px; margin: 20px 0;">
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>E-Mail:</strong> ${email}</p>
+            <p><strong>Betreff:</strong> ${subject}</p>
+          </div>
+          <div style="margin: 20px 0;">
+            <h3 style="color: #333;">Nachricht:</h3>
+            <p style="white-space: pre-wrap; background-color: #f9f9f9; padding: 15px; border-radius: 5px; border-left: 4px solid #007bff;">${message}</p>
+          </div>
+          <p style="font-size: 12px; color: #666; margin-top: 30px;">
+            Diese E-Mail wurde über das Kontaktformular auf der Intrapex-Website gesendet.
+          </p>
+        </div>
+      `,
       replyTo: email,
     });
 
     if (error) {
+      console.error('Resend Fehler:', error);
       return {
         success: false,
-        message: 'Fehler beim Senden der E-Mail. Bitte versuchen Sie es später erneut.',
+        message: `Fehler beim Senden der E-Mail: ${error.message}`,
       };
     }
 
+    console.log('E-Mail erfolgreich gesendet:', data);
     return {
       success: true,
       message: 'Ihre Nachricht wurde erfolgreich gesendet.',
     };
   } catch (error) {
+    console.error('Unerwarteter Fehler:', error);
     return {
       success: false,
-      message: 'Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.',
+      message: `Ein unerwarteter Fehler ist aufgetreten: ${error instanceof Error ? error.message : 'Unbekannter Fehler'}`,
     };
   }
 }
