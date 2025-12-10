@@ -21,15 +21,11 @@ export async function sendContactEmail(prevState: any, formData: FormData) {
     }
 
     // E-Mail über Resend senden
-    // Während der Entwicklung an die Test-E-Mail senden, da Resend nur Test-E-Mails erlaubt
-    const recipient = process.env.NODE_ENV === 'production'
-      ? ['office@intrapex.at']
-      : ['p.jauker.mail@gmail.com'];
-    
+    // Immer an office@intrapex.at senden, da die Domain jetzt verifiziert ist
     const { data, error } = await resend.emails.send({
-      from: 'Kontaktformular <onboarding@resend.dev>',
-      to: recipient,
-      subject: `${subject} - Nachricht von ${name}${process.env.NODE_ENV !== 'production' ? ' (für office@intrapex.at)' : ''}`,
+      from: 'Kontaktformular <office@intrapex.at>',
+      to: ['office@intrapex.at'],
+      subject: `${subject} - Nachricht von ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #333;">Neue Nachricht über Kontaktformular</h2>
