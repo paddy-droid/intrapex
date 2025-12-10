@@ -11,6 +11,12 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Leere Turbopack-Konfiguration, um Fehler zu vermeiden
+  turbopack: {},
+  // Verwende Webpack anstelle von Turbopack für den Build
+  webpack: (config, { isServer }) => {
+    return config;
+  },
 };
 
 export default nextConfig;
