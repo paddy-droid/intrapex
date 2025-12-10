@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo-intrapex.png",
   },
+  verification: {
+    google: "wDOZHPqlaIzzeb_YJf7J-mdV8O3HxveErDTNCOjhabI",
+  },
 };
 
 export default function RootLayout({
