@@ -14,6 +14,7 @@ import { NicheServicesSection } from "@/components/sections/NicheServicesSection
 import { IndustrialDeepDiveSection } from "@/components/sections/IndustrialDeepDiveSection";
 import { TechnicalDataSection } from "@/components/sections/TechnicalDataSection";
 import { AluminumCastSection } from "@/components/sections/AluminumCastSection";
+import ExplainerModal from "@/components/ui/ExplainerVideo";
 
 export const metadata: Metadata = {
     title: "Gießerei Oberösterreich | Industrieguss & Stahlindustrie Intrapex",
@@ -121,6 +122,19 @@ export default function GiessereiOberoesterreich() {
                             </div>
                             <div className="absolute -top-6 -right-6 w-32 h-32 bg-slate-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Video Section - Unsere Dienstleistungen in Aktion */}
+            <section className="py-24 bg-slate-900 text-white">
+                <div className="container mx-auto px-4 max-w-5xl text-center">
+                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6">Unsere Dienstleistungen in Aktion</h2>
+                    <p className="text-slate-300 text-lg mb-12 max-w-3xl mx-auto">
+                        Sehen Sie selbst, wie wir Qualität und Präzision in jedem Gussteil verwirklichen.
+                    </p>
+                    <div className="relative max-w-4xl mx-auto">
+                        <ExplainerModal src="/Intrapex Gießerei Dienstleistungen.mp4" />
                     </div>
                 </div>
             </section>

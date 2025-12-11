@@ -1,6 +1,7 @@
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import ExplainerModal from "@/components/ui/ExplainerVideo";
 
 export const metadata: Metadata = {
     title: "Kontakt zur Gießerei: Anfrage für Wien & Niederösterreich",
@@ -20,6 +21,17 @@ export default function Kontakt() {
                     </p>
                 </div>
             </section>
+
+            {/* Video Section */}
+            <section className="py-16 bg-slate-50">
+                <div className="container mx-auto px-4 max-w-5xl text-center">
+                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-6">Unsere Dienstleistungen in Aktion</h2>
+                    <p className="text-lg text-slate-600 mb-12 max-w-3xl mx-auto">
+                        Sehen Sie selbst, wie wir Qualität und Präzision in jedem Gussteil verwirklichen.
+                    </p>
+                </div>
+            </section>
+            <ExplainerModal src="/Intrapex Gießerei Dienstleistungen.mp4" />
 
             <div className="container max-w-6xl mx-auto px-4 -mt-8 relative z-10 pb-24">
                 <div className="grid lg:grid-cols-3 gap-8">
