@@ -8,8 +8,9 @@ export default function ExplainerModal({ src }: { src: string }) {
     const [isPortrait, setIsPortrait] = useState(false);
     const [isLoaded, setIsLoaded] = useState(false);
     const [volume, setVolume] = useState(0.7);
-    const [isMuted, setIsMuted] = useState(false);
+    const [isMuted, setIsMuted] = useState(true); // Initial stumm, um Browser-Richtlinien zu umgehen
     const [audioError, setAudioError] = useState(false);
+    const [hasStarted, setHasStarted] = useState(false); // Verfolgt, ob das Video bereits gestartet wurde
     const videoRef = useRef<HTMLVideoElement>(null);
 
     useEffect(() => {
@@ -25,7 +26,7 @@ export default function ExplainerModal({ src }: { src: string }) {
             // Audio-Einstellungen initialisieren
             try {
                 video.volume = volume;
-                video.muted = false;
+                video.muted = true; // Initial stumm, um Browser-Richtlinien zu umgehen
             } catch (error) {
                 console.warn('Audio-Einstellungen konnten nicht initialisiert werden:', error);
                 setAudioError(true);
@@ -68,30 +69,29 @@ export default function ExplainerModal({ src }: { src: string }) {
             if (isPlaying) {
                 videoRef.current.pause();
             } else {
-                // Versuche, das Video mit Ton abzuspielen
+                // Video initial stumm starten, um Browser-Richtlinien zu umgehen
+                videoRef.current.muted = true;
+                
                 const playPromise = videoRef.current.play();
                 
                 if (playPromise !== undefined) {
                     playPromise
                         .then(() => {
-                            // Erfolgreich mit Ton abgespielt
+                            // Erfolgreich gestartet - jetzt Ton aktivieren
+                            setHasStarted(true);
                             setIsMuted(false);
-                        })
-                        .catch((error) => {
-                            // Autoplay mit Ton blockiert, mit Ton als Fallback versuchen
-                            console.warn('Autoplay mit Ton blockiert, versuche mit Ton:', error);
                             videoRef.current!.muted = false;
                             videoRef.current!.volume = volume;
-                            
-                            // Erneuter Versuch
-                            videoRef.current!.play()
-                                .catch((retryError) => {
-                                    // Immer noch blockiert, stumm als letzten Ausweg
-                                    console.warn('Auch mit Ton blockiert, stumm als Fallback:', retryError);
-                                    videoRef.current!.muted = true;
-                                    setIsMuted(true);
-                                    videoRef.current!.play();
-                                });
+                        })
+                        .catch((error) => {
+                            // Spezifische Behandlung für Autoplay-Beschränkungen
+                            if (error.name === 'NotAllowedError') {
+                                console.warn('Autoplay blockiert - Benutzerinteraktion erforderlich:', error);
+                                setAudioError(true);
+                            } else {
+                                console.error('Video-Wiedergabe fehlgeschlagen:', error);
+                                setAudioError(true);
+                            }
                         });
                 }
             }
@@ -101,7 +101,7 @@ export default function ExplainerModal({ src }: { src: string }) {
 
     const handleVolumeChange = (newVolume: number) => {
         setVolume(newVolume);
-        if (videoRef.current) {
+        if (videoRef.current && hasStarted) {
             videoRef.current.volume = newVolume;
             // Wenn Lautstärke > 0, stummschaltung aufheben
             if (newVolume > 0 && isMuted) {
@@ -112,7 +112,7 @@ export default function ExplainerModal({ src }: { src: string }) {
     };
 
     const toggleMute = () => {
-        if (videoRef.current) {
+        if (videoRef.current && hasStarted) {
             const newMutedState = !isMuted;
             setIsMuted(newMutedState);
             videoRef.current.muted = newMutedState;
@@ -132,11 +132,12 @@ export default function ExplainerModal({ src }: { src: string }) {
                         className="w-full h-full object-contain"
                         controls={isPlaying} // Show native controls once playing
                         playsInline
-                        muted={false}
+                        muted={true} // Initial stumm, um Browser-Richtlinien zu umgehen
                     />
 
-                    {/* Lautstärke-Steuerung - immer sichtbar */}
-                    <div className="absolute bottom-4 left-4 flex items-center gap-2 bg-black/60 backdrop-blur-sm rounded-lg px-3 py-2">
+                    {/* Lautstärke-Steuerung - nur sichtbar nach Video-Start */}
+                    {hasStarted && (
+                        <div className="absolute bottom-4 left-4 flex items-center gap-2 bg-black/60 backdrop-blur-sm rounded-lg px-3 py-2">
                         <button
                             onClick={toggleMute}
                             className="text-white hover:text-orange-400 transition-colors"
@@ -155,12 +156,13 @@ export default function ExplainerModal({ src }: { src: string }) {
                             aria-label="Lautstärke regeln"
                         />
                         <span className="text-white text-xs w-8">{Math.round(volume * 100)}%</span>
-                    </div>
+                        </div>
+                    )}
 
                     {/* Audio-Fehler-Hinweis */}
                     {audioError && (
                         <div className="absolute top-4 right-4 bg-red-900/80 text-white text-xs px-2 py-1 rounded">
-                            Audio-Probleme - Browser blockiert möglicherweise Autoplay
+                            Audio-Probleme - Bitte klicken Sie auf den Play-Button
                         </div>
                     )}
 
