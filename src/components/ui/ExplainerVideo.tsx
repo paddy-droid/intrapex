@@ -1,13 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Play } from "lucide-react";
 
 export default function ExplainerModal({ src }: { src: string }) {
     const [hasStarted, setHasStarted] = useState(false);
+    const videoRef = useRef<HTMLVideoElement>(null);
 
-    const handlePlay = () => {
-        setHasStarted(true);
+    const handlePlayClick = () => {
+        if (videoRef.current) {
+            videoRef.current.play();
+            setHasStarted(true);
+        }
     };
 
     return (
@@ -18,17 +22,22 @@ export default function ExplainerModal({ src }: { src: string }) {
 
                 <div className="relative aspect-[9/16] max-w-md mx-auto w-full rounded-2xl overflow-hidden shadow-2xl border border-slate-700 bg-black">
                     <video
-                        src={src}
+                        ref={videoRef}
+                        src={`${src}#t=0.1`}
                         className="w-full h-full object-contain"
                         controls={true}
                         muted={false}
                         playsInline
-                        onPlay={handlePlay}
+                        preload="metadata"
+                        onPlay={() => setHasStarted(true)}
                     />
 
                     {!hasStarted && (
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/30 transition-all cursor-pointer" onClick={() => document.querySelector('video')?.play()}>
-                            <div className="h-24 w-24 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30 transition-transform duration-300 hover:scale-110">
+                        <div
+                            className="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/30 transition-all cursor-pointer group"
+                            onClick={handlePlayClick}
+                        >
+                            <div className="h-24 w-24 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30 transition-transform duration-300 group-hover:scale-110">
                                 <Play className="h-10 w-10 text-white fill-white ml-2" />
                             </div>
                         </div>
