@@ -2,6 +2,7 @@ import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 import ExplainerModal from "@/components/ui/ExplainerVideo";
+import SchemaMarkup from "@/components/seo/SchemaMarkup";
 
 export const metadata: Metadata = {
     title: "Kontakt zur Gießerei: Anfrage für Wien & Niederösterreich",
@@ -9,8 +10,40 @@ export const metadata: Metadata = {
 };
 
 export default function Kontakt() {
+    const localBusinessSchema = {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Intrapex GmbH",
+        "image": "https://intrapex.at/logo-intrapex.png",
+        "telephone": "+43 664 450 31 77",
+        "email": "office@intrapex.at",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Wiener Landstraße 65",
+            "addressLocality": "Michelndorf",
+            "postalCode": "3452",
+            "addressCountry": "AT"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+                "opens": "08:00",
+                "closes": "16:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Friday",
+                "opens": "08:00",
+                "closes": "12:00"
+            }
+        ],
+        "url": "https://intrapex.at/kontakt"
+    };
+
     return (
         <div className="flex flex-col w-full bg-slate-50">
+            <SchemaMarkup schema={localBusinessSchema} />
 
             {/* Header */}
             <section className="bg-slate-900 py-16 text-center">
@@ -46,7 +79,7 @@ export default function Kontakt() {
                                 <MapPin className="h-6 w-6 text-orange-500 flex-shrink-0 mt-1" />
                                 <div>
                                     <h4 className="font-bold mb-1">Anschrift</h4>
-                                    <p className="text-slate-300">Intrapex<br />Platzhalter Straße 1<br />3430 Tulln an der Donau<br />Österreich</p>
+                                    <p className="text-slate-300">Intrapex GmbH<br />Wiener Landstraße 65<br />3452 Michelndorf<br />Österreich</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">

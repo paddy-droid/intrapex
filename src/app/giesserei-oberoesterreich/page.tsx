@@ -15,6 +15,7 @@ import { IndustrialDeepDiveSection } from "@/components/sections/IndustrialDeepD
 import { TechnicalDataSection } from "@/components/sections/TechnicalDataSection";
 import { AluminumCastSection } from "@/components/sections/AluminumCastSection";
 import ExplainerModal from "@/components/ui/ExplainerVideo";
+import SchemaMarkup from "@/components/seo/SchemaMarkup";
 
 export const metadata: Metadata = {
     title: "Gießerei Oberösterreich | Industrieguss & Stahlindustrie Intrapex",
@@ -23,8 +24,64 @@ export const metadata: Metadata = {
 };
 
 export default function GiessereiOberoesterreich() {
+    const regionSchema = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Industrieguss Oberösterreich",
+        "provider": {
+            "@type": "Organization",
+            "name": "Intrapex"
+        },
+        "areaServed": {
+            "@type": "State",
+            "name": "Oberösterreich"
+        },
+        "description": "Hochwertiger Industrie-Guss für Maschinenbau und Stahlindustrie in Oberösterreich.",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Guss-Portfolio",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Grauguss"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Sphäroguss"
+                    }
+                }
+            ]
+        }
+    };
+
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://intrapex.at"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Gießerei Oberösterreich",
+                "item": "https://intrapex.at/giesserei-oberoesterreich"
+            }
+        ]
+    };
+
     return (
         <div className="flex flex-col w-full bg-slate-50">
+            <SchemaMarkup schema={regionSchema} />
+            <SchemaMarkup schema={breadcrumbSchema} />
             {/* 1. Hero Section */}
             <section className="relative w-full h-[85vh] min-h-[700px] flex items-center justify-center overflow-hidden">
                 <video

@@ -27,6 +27,7 @@ import { TechnicalDataSection } from "@/components/sections/TechnicalDataSection
 import { AluminumCastSection } from "@/components/sections/AluminumCastSection";
 
 import type { Metadata } from "next";
+import SchemaMarkup from "@/components/seo/SchemaMarkup";
 
 export const metadata: Metadata = {
   title: "Intrapex: Gießerei-Netzwerk für Wien & Niederösterreich",
@@ -35,8 +36,21 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Intrapex",
+    "url": "https://intrapex.at",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://intrapex.at/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
     <div className="flex flex-col w-full">
+      <SchemaMarkup schema={websiteSchema} />
       {/* Premium Hero Section - Simplified & Responsive */}
       <section className="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden bg-slate-900 pt-20 pb-16">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-slate-800 via-slate-950 to-black opacity-60 z-0"></div>

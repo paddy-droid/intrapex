@@ -9,7 +9,7 @@ export function Footer() {
 
                     {/* Brand */}
                     <div className="space-y-4">
-                        <span className="text-2xl font-serif font-bold text-white tracking-tight uppercase">Intrapex</span>
+                        <span className="text-2xl font-serif font-bold text-white tracking-tight uppercase">Intrapex GmbH</span>
                         <p className="text-sm text-slate-400 leading-relaxed max-w-xs">
                             Ihr Netzwerk für hochwertige Gusslösungen in Europa. Wir verbinden Tradition mit modernster Fertigungstechnologie.
                         </p>
@@ -23,6 +23,7 @@ export function Footer() {
                             <li><Link href="/materialien" className="hover:text-orange-500 transition-colors">Materialien</Link></li>
                             <li><Link href="/ueber-uns" className="hover:text-orange-500 transition-colors">Über Uns</Link></li>
                             <li><Link href="/kontakt" className="hover:text-orange-500 transition-colors">Kontakt</Link></li>
+                            <li><Link href="/impressum" className="hover:text-orange-500 transition-colors">Impressum</Link></li>
                         </ul>
                     </div>
 
@@ -55,7 +56,7 @@ export function Footer() {
                         <ul className="space-y-4 text-sm">
                             <li className="flex items-start gap-3">
                                 <MapPin className="h-5 w-5 text-orange-600 flex-shrink-0" />
-                                <span>3430 Tulln an der Donau<br />Österreich</span>
+                                <span>Intrapex GmbH<br />Wiener Landstraße 65<br />3452 Michelndorf</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone className="h-5 w-5 text-orange-600 flex-shrink-0" />
