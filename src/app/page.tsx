@@ -165,12 +165,12 @@ export default function Home() {
               </div>
             </div>
             <div className="order-1 md:order-2">
-              <h2 className="text-sm font-bold text-orange-600 uppercase tracking-widest mb-4">
+              <div className="text-sm font-bold text-orange-600 uppercase tracking-widest mb-4">
                 Unser Anspruch
-              </h2>
-              <h3 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6 leading-tight">
+              </div>
+              <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6 leading-tight">
                 Mehr als nur eine Gießerei. Ein Partner.
-              </h3>
+              </h2>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
                 Intrapex ist nicht nur Lieferant, sondern Ihr strategischer
                 Partner für Gussprodukte. Wir bündeln die Kapazitäten der besten
@@ -382,12 +382,12 @@ export default function Home() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-sm font-bold text-orange-600 uppercase tracking-widest mb-3">
+            <div className="text-sm font-bold text-orange-600 uppercase tracking-widest mb-3">
               Portfolio
-            </h2>
-            <h3 className="text-4xl font-serif font-bold text-slate-900">
+            </div>
+            <h2 className="text-4xl font-serif font-bold text-slate-900">
               Meisterhafte Gusslösungen.
-            </h3>
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
@@ -435,12 +435,12 @@ export default function Home() {
       < section className="py-24 bg-slate-50 overflow-hidden" >
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-sm font-bold text-orange-600 uppercase tracking-widest mb-3">
+            <div className="text-sm font-bold text-orange-600 uppercase tracking-widest mb-3">
               Der Ablauf
-            </h2>
-            <h3 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
+            </div>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
               In 3 Schritten zum fertigen Gussteil.
-            </h3>
+            </h2>
             <p className="text-slate-600 text-lg">
               Wir machen es Ihnen einfach. Von der ersten unverbindlichen
               Anfrage bis zur pünktlichen Lieferung – ein transparenter Prozess
@@ -464,9 +464,9 @@ export default function Home() {
                   <div className="w-16 h-16 mx-auto bg-slate-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-orange-50 transition-colors">
                     <Send className="h-8 w-8 text-slate-700 group-hover:text-orange-600 transition-colors" />
                   </div>
-                  <h4 className="text-xl font-bold text-slate-900 mb-3">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">
                     Anfrage & Beratung
-                  </h4>
+                  </h3>
                   <p className="text-slate-600 text-sm leading-relaxed mb-4">
                     Senden Sie uns Ihre Skizze, ein Foto oder CAD-Daten. Unsere
                     Techniker prüfen machbare Legierungen (Grauguss, Stahl,
@@ -496,9 +496,9 @@ export default function Home() {
                   <div className="w-16 h-16 mx-auto bg-slate-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-orange-50 transition-colors">
                     <Settings className="h-8 w-8 text-slate-700 group-hover:text-orange-600 transition-colors" />
                   </div>
-                  <h4 className="text-xl font-bold text-slate-900 mb-3">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">
                     Produktion & Qualität
-                  </h4>
+                  </h3>
                   <p className="text-slate-600 text-sm leading-relaxed mb-4">
                     Wir koordinieren den Modellbau und wählen die passende
                     Gießerei aus unserem Netzwerk. Jeder Schritt wird überwacht.
@@ -527,9 +527,9 @@ export default function Home() {
                   <div className="w-16 h-16 mx-auto bg-slate-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-orange-50 transition-colors">
                     <Truck className="h-8 w-8 text-slate-700 group-hover:text-orange-600 transition-colors" />
                   </div>
-                  <h4 className="text-xl font-bold text-slate-900 mb-3">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">
                     Lieferung
-                  </h4>
+                  </h3>
                   <p className="text-slate-600 text-sm leading-relaxed mb-4">
                     Das fertige Bauteil kommt sicher verpackt zu Ihnen. Auf
                     Wunsch inkl. mechanischer Bearbeitung und Oberflächenschutz.
@@ -557,34 +557,34 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-slate-50 p-6 rounded-2xl hover:bg-orange-50 transition-colors">
               <Globe className="h-8 w-8 text-orange-600 mb-4" />
-              <h4 className="font-bold text-slate-900 mb-2">
+              <div className="font-bold text-slate-900 mb-2">
                 Europaweites Netzwerk
-              </h4>
+              </div>
               <p className="text-sm text-slate-600">
                 Zugriff auf spezialisierte Gießereien für jeden Werkstoff.
               </p>
             </div>
             <div className="bg-slate-50 p-6 rounded-2xl hover:bg-orange-50 transition-colors">
               <ShieldCheck className="h-8 w-8 text-orange-600 mb-4" />
-              <h4 className="font-bold text-slate-900 mb-2">
+              <div className="font-bold text-slate-900 mb-2">
                 Qualitätsgarantie
-              </h4>
+              </div>
               <p className="text-sm text-slate-600">
                 Strenge Kontrollen und Norm-Konformität bei jedem Guss.
               </p>
             </div>
             <div className="bg-slate-50 p-6 rounded-2xl hover:bg-orange-50 transition-colors">
               <Truck className="h-8 w-8 text-orange-600 mb-4" />
-              <h4 className="font-bold text-slate-900 mb-2">Just-in-Time</h4>
+              <div className="font-bold text-slate-900 mb-2">Just-in-Time</div>
               <p className="text-sm text-slate-600">
                 Optimierte Logistik für Ihre Baustellenplanung.
               </p>
             </div>
             <div className="bg-slate-50 p-6 rounded-2xl hover:bg-orange-50 transition-colors">
               <Users className="h-8 w-8 text-orange-600 mb-4" />
-              <h4 className="font-bold text-slate-900 mb-2">
+              <div className="font-bold text-slate-900 mb-2">
                 Spezial-Expertise
-              </h4>
+              </div>
               <p className="text-sm text-slate-600">
                 Jahrzehntelange Erfahrung bei komplexen Geometrien.
               </p>
@@ -597,12 +597,12 @@ export default function Home() {
       < section className="py-24 bg-slate-50" >
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-sm font-bold text-orange-600 uppercase tracking-widest mb-3">
+            <div className="text-sm font-bold text-orange-600 uppercase tracking-widest mb-3">
               Stimmen
-            </h2>
-            <h3 className="text-3xl md:text-4xl font-serif font-bold text-slate-900">
+            </div>
+            <div className="text-3xl md:text-4xl font-serif font-bold text-slate-900">
               Das sagen unsere Kunden.
-            </h3>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -680,12 +680,12 @@ export default function Home() {
       < section className="py-24 bg-white" >
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-16">
-            <h2 className="text-sm font-bold text-orange-600 uppercase tracking-widest mb-3">
+            <div className="text-sm font-bold text-orange-600 uppercase tracking-widest mb-3">
               Wissenswertes
-            </h2>
-            <h3 className="text-3xl md:text-4xl font-serif font-bold text-slate-900">
+            </div>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900">
               Häufig gestellte Fragen.
-            </h3>
+            </h2>
           </div>
 
           <div className="space-y-4">
@@ -764,9 +764,9 @@ export default function Home() {
       < section className="py-24 bg-slate-900 relative overflow-hidden" >
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-800 to-slate-950 opacity-50"></div>
         <div className="container relative z-10 mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
+          <div className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
             Ihr Projekt in guten Händen.
-          </h2>
+          </div>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-10">
             Lassen Sie uns über Ihre Anforderungen sprechen. Unverbindlich und
             auf Augenhöhe.

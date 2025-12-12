@@ -37,7 +37,7 @@ export function ProblemSolutionSection({ region }: ProblemSolutionSectionProps) 
                             <div className="h-12 w-12 rounded-full bg-red-900/20 flex items-center justify-center text-red-500 shadow-lg shadow-red-900/10">
                                 <AlertTriangle className="h-6 w-6" />
                             </div>
-                            <h3 className="text-2xl font-bold text-white">Das Problem</h3>
+                            <div className="text-2xl font-bold text-white">Das Problem</div>
                         </div>
                         <ul className="space-y-6 text-slate-300">
                             <li className="flex gap-4 items-start">
@@ -71,7 +71,7 @@ export function ProblemSolutionSection({ region }: ProblemSolutionSectionProps) 
                             <div className="h-12 w-12 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 shadow-lg shadow-green-500/20">
                                 <RefreshCcw className="h-6 w-6" />
                             </div>
-                            <h3 className="text-2xl font-bold text-white">Die Intrapex Lösung</h3>
+                            <div className="text-2xl font-bold text-white">Die Intrapex Lösung</div>
                         </div>
                         <ul className="space-y-6 text-slate-300">
                             <li className="flex gap-4 items-start">
@@ -108,35 +108,35 @@ export function ProblemSolutionSection({ region }: ProblemSolutionSectionProps) 
                 {/* Keywords Bar / Workflow Links */}
                 <div className="mt-20">
                     <div className="text-center mb-10">
-                        <h4 className="text-xl font-serif font-bold text-white">Unser Prozess: Vom Altteil zum Neuteil</h4>
+                        <h3 className="text-xl font-serif font-bold text-white">Unser Prozess: Vom Altteil zum Neuteil</h3>
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
                         <div className="p-6 rounded-2xl bg-slate-800/30 border border-slate-700 hover:border-orange-500/30 transition-colors text-center group">
                             <div className="h-10 w-10 mx-auto mb-4 text-orange-500 group-hover:scale-110 transition-transform">
                                 <FileSearch className="h-full w-full" />
                             </div>
-                            <h5 className="font-bold text-white mb-2">1. Analyse</h5>
+                            <div className="font-bold text-white mb-2">1. Analyse</div>
                             <p className="text-xs text-slate-400">3D-Scan & Spektralanalyse des Altteils</p>
                         </div>
                         <div className="p-6 rounded-2xl bg-slate-800/30 border border-slate-700 hover:border-orange-500/30 transition-colors text-center group">
                             <div className="h-10 w-10 mx-auto mb-4 text-orange-500 group-hover:scale-110 transition-transform">
                                 <PenTool className="h-full w-full" />
                             </div>
-                            <h5 className="font-bold text-white mb-2">2. Re-Design</h5>
+                            <div className="font-bold text-white mb-2">2. Re-Design</div>
                             <p className="text-xs text-slate-400">Erstellung CAD-Modell & Zeichnungen</p>
                         </div>
                         <div className="p-6 rounded-2xl bg-slate-800/30 border border-slate-700 hover:border-orange-500/30 transition-colors text-center group">
                             <div className="h-10 w-10 mx-auto mb-4 text-orange-500 group-hover:scale-110 transition-transform">
                                 <Layers className="h-full w-full" />
                             </div>
-                            <h5 className="font-bold text-white mb-2">3. Modellbau</h5>
+                            <div className="font-bold text-white mb-2">3. Modellbau</div>
                             <p className="text-xs text-slate-400">3D-Druck oder CNC-Fräsen des Modells</p>
                         </div>
                         <div className="p-6 rounded-2xl bg-slate-800/30 border border-slate-700 hover:border-orange-500/30 transition-colors text-center group">
                             <div className="h-10 w-10 mx-auto mb-4 text-green-500 group-hover:scale-110 transition-transform">
                                 <RefreshCcw className="h-full w-full" />
                             </div>
-                            <h5 className="font-bold text-white mb-2">4. Guss</h5>
+                            <div className="font-bold text-white mb-2">4. Guss</div>
                             <p className="text-xs text-slate-400">Abguss, Bearbeitung & Lieferung</p>
                         </div>
                     </div>

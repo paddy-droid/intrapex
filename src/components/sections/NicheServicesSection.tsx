@@ -104,7 +104,7 @@ export function NicheServicesSection({ region }: NicheServicesSectionProps) {
                                 <Hammer className="h-6 w-6 text-slate-700" />
                             </div>
                             <div>
-                                <h4 className="font-bold text-slate-900 mb-1">Handformguss Kleinserie</h4>
+                                <div className="font-bold text-slate-900 mb-1">Handformguss Kleinserie</div>
                                 <p className="text-sm text-slate-600 leading-relaxed">
                                     Traditionelles Handwerk für geringe Stückzahlen. Ideal für Prototypen und komplexe Geometrien, die Sorgfalt erfordern.
                                 </p>
@@ -116,7 +116,7 @@ export function NicheServicesSection({ region }: NicheServicesSectionProps) {
                                 <Box className="h-6 w-6 text-slate-700" />
                             </div>
                             <div>
-                                <h4 className="font-bold text-slate-900 mb-1">Maschinenformguss Österreich</h4>
+                                <div className="font-bold text-slate-900 mb-1">Maschinenformguss Österreich</div>
                                 <p className="text-sm text-slate-600 leading-relaxed">
                                     Automatisierte Produktion für mittlere bis große Serien. Höchste Wiederholgenauigkeit für Industriebetriebe{regionSuffix}.
                                 </p>
@@ -128,7 +128,7 @@ export function NicheServicesSection({ region }: NicheServicesSectionProps) {
                                 <Layers className="h-6 w-6 text-slate-700" />
                             </div>
                             <div>
-                                <h4 className="font-bold text-slate-900 mb-1">Verlorene Form Guss</h4>
+                                <div className="font-bold text-slate-900 mb-1">Verlorene Form Guss</div>
                                 <p className="text-sm text-slate-600 leading-relaxed">
                                     Präzisionsguss für filigrane Strukturen. Ermöglicht Hinterschneidungen und komplexe Innenkonturen in einem Guss.
                                 </p>

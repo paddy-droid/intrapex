@@ -126,10 +126,10 @@ export default function GiessereiOberoesterreich() {
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div className="space-y-8">
                             <div>
-                                <h2 className="text-orange-600 font-bold uppercase tracking-widest text-sm mb-2">Industrie-Kompetenz</h2>
-                                <h3 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 leading-tight">
+                                <div className="text-orange-600 font-bold uppercase tracking-widest text-sm mb-2">Industrie-Kompetenz</div>
+                                <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 leading-tight">
                                     Zuverlässiger Partner für den Maschinenbau in OÖ
-                                </h3>
+                                </h2>
                             </div>
                             <div className="prose prose-lg text-slate-600">
                                 <p>
@@ -147,14 +147,14 @@ export default function GiessereiOberoesterreich() {
                                 <div className="flex items-start gap-3 p-4 rounded-xl bg-orange-50 border border-orange-100">
                                     <Scale className="h-6 w-6 text-orange-600 mt-1 flex-shrink-0" />
                                     <div>
-                                        <h4 className="font-bold text-slate-900">4.000 kg Stückgewicht</h4>
+                                        <div className="font-bold text-slate-900">4.000 kg Stückgewicht</div>
                                         <p className="text-sm text-slate-600">Wir gießen auch schwere Brocken für den Maschinenbau.</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-100">
                                     <Zap className="h-6 w-6 text-slate-600 mt-1 flex-shrink-0" />
                                     <div>
-                                        <h4 className="font-bold text-slate-900">Just-in-Time</h4>
+                                        <div className="font-bold text-slate-900">Just-in-Time</div>
                                         <p className="text-sm text-slate-500">Perfekt getaktet für Ihre Produktion.</p>
                                     </div>
                                 </div>
@@ -339,7 +339,7 @@ export default function GiessereiOberoesterreich() {
                 <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5 mix-blend-overlay"></div>
                 <div className="container px-4 relative z-10">
                     <span className="text-orange-500 font-bold uppercase tracking-widest text-sm mb-4 block">Bereit für Ihr Projekt?</span>
-                    <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-8">Guss-Qualität für OÖ</h2>
+                    <div className="text-4xl md:text-6xl font-serif font-bold text-white mb-8">Guss-Qualität für OÖ</div>
                     <p className="text-slate-300 text-xl max-w-2xl mx-auto mb-12 font-light">
                         Verlassen Sie sich auf einen Partner, der Ihre Anforderungen versteht. Starten Sie jetzt Ihre Anfrage.
                     </p>
